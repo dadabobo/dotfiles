@@ -89,6 +89,8 @@ nnoremap j gj
 nnoremap gj j
 
 " 输入模式下快速的移动光标
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 
@@ -99,7 +101,7 @@ cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
 " 使用超级用户权限编辑这个文件
-cmap w!! w !sudo tee >/dev/null %
+cmap sw w !sudo tee >/dev/null %
 
 " 修改leader键
 let mapleader = ';'
