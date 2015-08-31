@@ -57,7 +57,7 @@ let g:unite_source_menu_menus.git.command_candidates = [
     \[' + git commit       (Fugitive)                                ,gc',
         \'Gcommit'],
     \[' + git log          (Fugitive)                                ,gl',
-        \'exe "silent Glog | Unite quickfix"'],
+        \'Glog'],
     \[' + git blame        (Fugitive)                                ,gb',
         \'Gblame'],
     \[' + git stage        (Fugitive)                                ,gw',
