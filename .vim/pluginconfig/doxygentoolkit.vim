@@ -1,0 +1,7 @@
+" doxygentoolkit "
+""""""""""""""""""
+let g:DoxygenToolkit_briefTag_pre="@brief  "
+let g:DoxygenToolkit_paramTag_pre="@param "
+let g:DoxygenToolkit_returnTag="@returns   "
+let g:DoxygenToolkit_authorName="grf"
+let g:DoxygenToolkit_licenseTag="CVTE 2015"
