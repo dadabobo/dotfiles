@@ -68,7 +68,6 @@ imap jk <Esc>
 
 " 绑定 space 到 : 按键
 map <space> :
-map <Leader>q :q<cr>
 
 " 绑定大写的 HL 为行首和行尾的快捷键
 noremap H ^
