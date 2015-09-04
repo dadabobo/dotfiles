@@ -24,6 +24,7 @@ syntax on
 
 " TAB 缩进设置
 set expandtab
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
@@ -48,6 +49,7 @@ set cursorline
 set wildmenu
 
 " 不使用代码折叠功能
+set foldmethod=syntax
 set nofoldenable
 
 " 不使用 swapfile
@@ -64,10 +66,10 @@ map <F4> :set hlsearch! hlsearch?<cr>
 nnoremap <F9> :TagbarToggle<cr>
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
-imap jk <Esc>
+inoremap jk <Esc>
 
 " 绑定 space 到 : 按键
-map <space> :
+noremap <space> :
 
 " 绑定大写的 HL 为行首和行尾的快捷键
 noremap H ^
@@ -82,10 +84,10 @@ nnoremap gl gu
 "nnoremap A a
 
 " 物理行上直接切换
-nnoremap k gk
-nnoremap gk k
-nnoremap j gj
-nnoremap gj j
+"nnoremap k gk
+"nnoremap gk k
+"nnoremap j gj
+"nnoremap gj j
 
 " 输入模式下快速的移动光标
 inoremap <C-k> <Up>
@@ -125,7 +127,7 @@ Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 
-" complete
+" auto complete
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Shougo/neocomplete.vim'
@@ -154,6 +156,11 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'majutsushi/tagbar'
+
+" cpp devlop
+Plugin 'derekwyatt/vim-fswitch'
+Plugin 'derekwyatt/vim-protodef'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
