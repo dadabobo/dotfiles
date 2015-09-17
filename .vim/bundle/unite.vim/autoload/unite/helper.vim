@@ -570,8 +570,28 @@ function! unite#helper#join_targets(targets) "{{{
 endfunction"}}}
 
 function! unite#helper#is_pty(command) "{{{
-  " Note: "pt" and "ack" needs pty.
-  return fnamemodify(a:command, ':t:r') =~# '^pt$\|^ack\%(-grep\)\?$'
+  " Note: "pt" and "ack" and "ag" needs pty.
+  " It is too bad.
+  return fnamemodify(a:command, ':t:r') =~#
+        \ '^pt$\|^ack\%(-grep\)\?$\|^ag$'
+endfunction"}}}
+
+function! unite#helper#complete_search_history(arglead, cmdline, cursorpos) "{{{
+  return filter(map(unite#util#uniq(s:histget('search')
+        \                           + s:histget('input')),
+        \           "substitute(v:val, '^\\\\<\\|\\\\>$', '', 'g')"),
+        \ "stridx(tolower(v:val), tolower(a:arglead)) == 0")
+endfunction"}}}
+
+function! unite#helper#get_input_list(input) abort "{{{
+  return map(split(a:input, '\\\@<! ', 1), "
+        \ substitute(unite#util#expand(v:val), '\\\\ ', ' ', 'g')")
+endfunction"}}}
+
+function! s:histget(type) abort "{{{
+  return filter(map(reverse(range(1, histnr(a:type))),
+        \           'histget(a:type, v:val)'),
+        \       'v:val != ""')
 endfunction"}}}
 
 let &cpo = s:save_cpo

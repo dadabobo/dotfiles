@@ -114,8 +114,13 @@ function! unite#init#_context(context, ...) "{{{
         \ && !get(context, 'no_auto_resize', 0)
     let context.auto_resize = 1
   endif
-  if context.path != '' && context.path !~ '/$'
-    let context.path .= '/'
+  if context.path != ''
+    " Expand "~".
+    let context.path = unite#util#expand(context.path)
+
+    if context.path !~ '/$'
+      let context.path .= '/'
+    endif
   endif
   if len(source_names) == 1
         \ && !get(context, 'no_hide_source_names', 0)
@@ -154,7 +159,7 @@ function! unite#init#_unite_buffer() "{{{
     setlocal bufhidden=hide
     setlocal buftype=nofile
     setlocal nolist
-    setlocal nobuflisted
+    setlocal buflisted
     if has('cursorbind')
       setlocal nocursorbind
     endif
@@ -202,15 +207,8 @@ function! unite#init#_unite_buffer() "{{{
             \ call unite#handlers#_on_buf_unload(expand('<afile>'))
       autocmd WinEnter,BufWinEnter <buffer>
             \ call unite#handlers#_on_bufwin_enter(bufnr(expand('<abuf>')))
-      autocmd WinLeave,BufWinLeave <buffer>
-            \ call unite#handlers#_restore_updatetime()
     augroup END
 
-    if v:version > 703 || v:version == 703 && has('patch418')
-      " Enable auto narrow feature.
-      autocmd plugin-unite InsertCharPre <buffer>
-            \ call unite#handlers#_on_insert_char_pre()
-    endif
     if v:version > 703 || v:version == 703 && has('patch867')
       " Enable auto narrow feature.
       autocmd plugin-unite TextChanged <buffer>
@@ -319,12 +317,9 @@ function! unite#init#_current_unite(sources, context) "{{{
   let unite.access_time = localtime()
   let unite.is_finalized = 0
   let unite.previewed_buffer_list = []
-  let unite.current_matchers = unite#util#convert2list(
-        \ unite#custom#get_profile(unite.profile_name, 'matchers'))
-  let unite.current_sorters = unite#util#convert2list(
-        \ unite#custom#get_profile(unite.profile_name, 'converters'))
-  let unite.current_converters = unite#util#convert2list(
-        \ unite#custom#get_profile(unite.profile_name, 'converters'))
+  let unite.current_matchers = []
+  let unite.current_sorters = []
+  let unite.current_converters = []
   let unite.preview_candidate = {}
   let unite.highlight_candidate = {}
   let unite.max_source_name = 0
@@ -658,7 +653,6 @@ function! unite#init#_sources(...) "{{{
         \ 'is_volatile' : 0,
         \ 'is_listed' : 1,
         \ 'is_forced' : 0,
-        \ 'is_grouped' : 0,
         \ 'action_table' : {},
         \ 'default_action' : {},
         \ 'default_kind' : 'common',

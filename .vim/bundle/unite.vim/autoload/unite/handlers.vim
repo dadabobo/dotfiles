@@ -117,6 +117,7 @@ function! unite#handlers#_on_bufwin_enter(bufnr)  "{{{
   endif
 
   setlocal nomodified
+  setlocal buflisted
 
   if exists('winnr')
     execute winnr.'wincmd w'
@@ -152,6 +153,8 @@ function! unite#handlers#_on_cursor_hold()  "{{{
         let is_async = unite.is_async
       endif
     endfor
+
+    call unite#handlers#_restore_updatetime()
   endif
 
   if is_async
@@ -290,17 +293,6 @@ function! unite#handlers#_on_buf_unload(bufname)  "{{{
   " Call finalize functions.
   call unite#helper#call_hook(unite#loaded_sources_list(), 'on_close')
   let unite.is_finalized = 1
-endfunction"}}}
-function! unite#handlers#_on_insert_char_pre()  "{{{
-  let prompt_linenr = unite#get_current_unite().prompt_linenr
-
-  if line('.') == prompt_linenr
-    return
-  endif
-
-  call cursor(prompt_linenr, 0)
-  startinsert!
-  call unite#handlers#_on_cursor_moved()
 endfunction"}}}
 
 function! unite#handlers#_save_updatetime()  "{{{

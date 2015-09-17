@@ -67,6 +67,13 @@ function! unite#kinds#jump_list#define() "{{{
       call s:adjust_scroll(s:best_winline())
       call s:clear_highlight()
     endfor
+
+    " Add search history
+    let context = unite#get_context()
+    if len(context.input_list) == 1
+          \ && context.input != ''
+      call histadd("search", context.input)
+    endif
   endfunction"}}}
 
   let kind.action_table.preview = {
