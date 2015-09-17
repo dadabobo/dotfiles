@@ -30,6 +30,7 @@ set shiftwidth=4
 
 " 缩进设置，设置基于文件的类型的缩进
 set autoindent
+set cino=(0,W4
 filetype plugin indent on
 
 " 改变超过 80 个字符之后的区域，这样就可以起到提示作用
@@ -150,17 +151,17 @@ Plugin 'Shougo/unite-outline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'DoxygenToolkit.vim'
 
-" more powerfual tools
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-fugitive'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'majutsushi/tagbar'
-
 " cpp devlop
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'derekwyatt/vim-protodef'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+
+" more powerfual tools
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-fugitive'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'majutsushi/tagbar'
+Plugin 'Chiel92/vim-autoformat'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -184,3 +185,4 @@ source ~/.vim/pluginconfig/neocomplete.vim
 source ~/.vim/pluginconfig/supertab.vim
 source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/easymotion.vim
+source ~/.vim/pluginconfig/vim-autoformat.vim
