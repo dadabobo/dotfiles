@@ -20,12 +20,13 @@ nnoremap <silent> [unite]n :<C-u>Unite
             \ -buffer-name=filenew file/new<cr>
 nnoremap <silent> [unite]b :<C-u>Unite
             \ -buffer-name=bufferlist buffer<cr>
-nnoremap <silent> [unite]l :<C-u>Unite
+nnoremap <silent> [unite]m :<C-u>Unite
             \ -buffer-name=mru file_mru<cr>
 nnoremap <silent> [unite]o :<C-u>Unite
             \ -buffer-name=outline outline<cr>
-nnoremap <silent> [unite]s  :<C-u>Unite
+nnoremap <silent> [unite]l :<C-u>Unite
             \ -buffer-name=search line:forward<cr>
+nnoremap <silent> [unite]s :<C-u>UniteWithCursorWord grep:.<CR>
 
 call unite#custom#profile('default', 'context', {
     \   'start_insert': 1,
