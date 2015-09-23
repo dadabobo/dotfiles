@@ -56,6 +56,12 @@ set nofoldenable
 " 不使用 swapfile
 set noswapfile
 
+" gui 设置
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
 " ++++++++++++++++++++++++++++++++++++++++
 " +             快捷键配置               +
 " ++++++++++++++++++++++++++++++++++++++++
@@ -131,7 +137,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 " auto complete
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'Shougo/neocomplete.vim'
+" Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 
 " parenthes
@@ -142,10 +148,11 @@ Plugin 'tpope/vim-repeat'
 
 " project manager
 Plugin 'scrooloose/nerdtree'
-Plugin 'Shougo/neomru.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/unite-outline'
+Plugin 'kien/ctrlp.vim'
+" Plugin 'Shougo/neomru.vim'
+" Plugin 'Shougo/vimproc.vim'
+" Plugin 'Shougo/unite.vim'
+" Plugin 'Shougo/unite-outline'
 
 " commenter
 Plugin 'scrooloose/nerdcommenter'
@@ -174,16 +181,16 @@ filetype plugin indent on    " required
 
 
 " +++++++++++++++++++++++++++++++++++++++
-" +       	 插件配置               +
+" +       	     插件配置               +
 " +++++++++++++++++++++++++++++++++++++++
 
-source ~/.vim/pluginconfig/vim-colors-solarized.vim
+"source ~/.vim/pluginconfig/vim-colors-solarized.vim
 source ~/.vim/pluginconfig/airline.vim
 source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/nerdtree.vim
-source ~/.vim/pluginconfig/unite.vim
+" source ~/.vim/pluginconfig/unite.vim
 source ~/.vim/pluginconfig/doxygentoolkit.vim
-source ~/.vim/pluginconfig/neocomplete.vim
+" source ~/.vim/pluginconfig/neocomplete.vim
 source ~/.vim/pluginconfig/supertab.vim
 source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/easymotion.vim
