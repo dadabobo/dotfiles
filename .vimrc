@@ -129,7 +129,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " themes
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -137,7 +137,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 " auto complete
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-" Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 
 " parenthes
@@ -160,7 +160,7 @@ Plugin 'DoxygenToolkit.vim'
 
 " cpp devlop
 Plugin 'derekwyatt/vim-fswitch'
-Plugin 'derekwyatt/vim-protodef'
+"Plugin 'derekwyatt/vim-protodef'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " more powerfual tools
@@ -184,13 +184,11 @@ filetype plugin indent on    " required
 " +       	     插件配置               +
 " +++++++++++++++++++++++++++++++++++++++
 
-"source ~/.vim/pluginconfig/vim-colors-solarized.vim
 source ~/.vim/pluginconfig/airline.vim
 source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/nerdtree.vim
-" source ~/.vim/pluginconfig/unite.vim
 source ~/.vim/pluginconfig/doxygentoolkit.vim
-" source ~/.vim/pluginconfig/neocomplete.vim
+source ~/.vim/pluginconfig/neocomplete.vim
 source ~/.vim/pluginconfig/supertab.vim
 source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/easymotion.vim
