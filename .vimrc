@@ -137,7 +137,8 @@ Plugin 'bronson/vim-trailing-whitespace'
 " auto complete
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'Shougo/neocomplete.vim'
+Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 
 " parenthes
@@ -188,8 +189,10 @@ source ~/.vim/pluginconfig/airline.vim
 source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/nerdtree.vim
 source ~/.vim/pluginconfig/doxygentoolkit.vim
-source ~/.vim/pluginconfig/neocomplete.vim
+"source ~/.vim/pluginconfig/neocomplete.vim
 source ~/.vim/pluginconfig/supertab.vim
 source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/easymotion.vim
 source ~/.vim/pluginconfig/vim-autoformat.vim
+source ~/.vim/pluginconfig/youcompleteme.vim
+source ~/.vim/pluginconfig/fugitive.vim
