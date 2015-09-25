@@ -1,7 +1,7 @@
 " youcompleteme "
 """""""""""""""""
 
-let g:ycm_global_ycm_extra_conf=".ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf="/home/steven/.vim/pluginconfig/.ycm_extra_conf.py"
 
 set completeopt=longest,menu
 
@@ -46,4 +46,7 @@ let g:ycm_filetype_blacklist = {
       \}
 
 " 定义跳转
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
+
+let g:ycm_show_diagnostics_ui = 0
