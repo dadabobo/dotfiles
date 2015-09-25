@@ -44,3 +44,6 @@ let g:ycm_filetype_blacklist = {
       \ 'tagbar' : 1,
       \ 'nerdtree' : 1,
       \}
+
+" 定义跳转
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
