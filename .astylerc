@@ -1,0 +1,23 @@
+# 使用 Google 的括号风格
+--style=google
+
+# 使用 4 个空格作为缩进宽度
+--indent=spaces=4
+
+# 给隐喻式的 inline 函数添加括号
+--attach-inlines
+
+# 操作符两边加上空格
+--pad-oper
+
+# 关键字之后加上空格
+--pad-header
+
+# 去掉括号内多余的空格
+--unpad-paren
+
+# 指针引用符号紧挨类型名
+--align-pointer=type
+
+# 给 if/else 都加上括号
+--add-brackets
