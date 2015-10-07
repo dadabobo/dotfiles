@@ -114,6 +114,19 @@ cmap sw w !sudo tee >/dev/null %
 " 修改leader键
 let mapleader = ';'
 
+" 删除设置
+set backspace=eol,start,indent
+
+" 滚动的时候保留的行数
+set scrolloff=10
+
+" vimrc文件修改之后自动加载
+autocmd! bufwritepost _vimrc source %
+autocmd! bufwritepost .vimrc source %
+
+"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+set completeopt=longest,menu
+
 " ++++++++++++++++++++++++++++++++++++++++
 " +             常用插件安装             +
 " ++++++++++++++++++++++++++++++++++++++++
@@ -129,7 +142,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " themes
-" Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -138,7 +150,6 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
-" Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 
 " parenthes
@@ -150,18 +161,14 @@ Plugin 'tpope/vim-repeat'
 " project manager
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-" Plugin 'Shougo/neomru.vim'
-" Plugin 'Shougo/vimproc.vim'
-" Plugin 'Shougo/unite.vim'
-" Plugin 'Shougo/unite-outline'
+Plugin 'tacahiroy/ctrlp-funky'
 
 " commenter
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'DoxygenToolkit.vim'
 
-" cpp devlop
+" cpp dev
 Plugin 'derekwyatt/vim-fswitch'
-"Plugin 'derekwyatt/vim-protodef'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " more powerfual tools
@@ -171,7 +178,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'majutsushi/tagbar'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'godlygeek/tabular'
-"Plugin 'brookhong/cscope.vim'
+Plugin 'sjl/gundo.vim'
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -189,10 +197,12 @@ source ~/.vim/pluginconfig/airline.vim
 source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/nerdtree.vim
 source ~/.vim/pluginconfig/doxygentoolkit.vim
-"source ~/.vim/pluginconfig/neocomplete.vim
 source ~/.vim/pluginconfig/supertab.vim
 source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/easymotion.vim
-source ~/.vim/pluginconfig/vim-autoformat.vim
+source ~/.vim/pluginconfig/autoformat.vim
 source ~/.vim/pluginconfig/youcompleteme.vim
 source ~/.vim/pluginconfig/fugitive.vim
+source ~/.vim/pluginconfig/gundo.vim
+source ~/.vim/pluginconfig/ack.vim
+source ~/.vim/pluginconfig/ctrlp.vim

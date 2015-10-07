@@ -45,8 +45,4 @@ let g:ycm_filetype_blacklist = {
       \ 'nerdtree' : 1,
       \}
 
-" 定义跳转
-nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
-
 let g:ycm_show_diagnostics_ui = 0
