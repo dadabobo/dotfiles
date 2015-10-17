@@ -174,7 +174,6 @@ Plug 'DoxygenToolkit.vim'
 
 " cpp dev
 Plug 'derekwyatt/vim-fswitch'
-Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'Chiel92/vim-autoformat'
 
 " git
@@ -186,11 +185,7 @@ Plug 'easymotion/vim-easymotion'
 " for indent
 Plug 'godlygeek/tabular'
 
-" undo tree
-Plug 'sjl/gundo.vim'
-
 " todo list
-" Plug 'freitass/todo.txt-vim'
 Plug 'vitalk/vim-simple-todo'
 
 call plug#end()
