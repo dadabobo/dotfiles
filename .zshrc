@@ -90,3 +90,7 @@ export TERM=xterm-256color
 export EDITOR=vim
 
 setopt nonomatch
+
+if [ -f /usr/bin/htop ]; then
+    alias top=htop
+fi

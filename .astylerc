@@ -21,3 +21,12 @@
 
 # 给 if/else 都加上括号
 --add-brackets
+
+# 条件编译模块的缩进
+--indent-preproc-block
+
+# 换行对齐括号
+--min-conditional-indent=0
+
+# 保持单行的代码
+--keep-one-line-blocks

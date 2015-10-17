@@ -34,8 +34,8 @@ set cino=(0,W4
 filetype plugin indent on
 
 " 改变超过 80 个字符之后的区域，这样就可以起到提示作用
-set colorcolumn=75
-set textwidth=74
+set colorcolumn=81
+set textwidth=80
 set fo+=mB
 set wrap
 
@@ -62,15 +62,30 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
+" 删除设置
+set backspace=eol,start,indent
+
+" 滚动的时候保留的行数
+set scrolloff=10
+
+" vimrc文件修改之后自动加载
+autocmd! bufwritepost _vimrc source %
+autocmd! bufwritepost .vimrc source %
+
+"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+set completeopt=longest,menu
+
 " ++++++++++++++++++++++++++++++++++++++++
 " +             快捷键配置               +
 " ++++++++++++++++++++++++++++++++++++++++
 
 map <F2> :set number! number?<cr>
-set pastetoggle=<F3>
 map <F4> :set hlsearch! hlsearch?<cr>
 
 nnoremap <F9> :TagbarToggle<cr>
+
+set pastetoggle=<F3>
+au InsertLeave * set nopaste
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
 inoremap jk <Esc>
@@ -114,76 +129,71 @@ cmap sw w !sudo tee >/dev/null %
 " 修改leader键
 let mapleader = ';'
 
-" 删除设置
-set backspace=eol,start,indent
-
-" 滚动的时候保留的行数
-set scrolloff=10
-
-" vimrc文件修改之后自动加载
-autocmd! bufwritepost _vimrc source %
-autocmd! bufwritepost .vimrc source %
-
-"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
-set completeopt=longest,menu
+" 使用方向键切换 buffer
+noremap <C-b>n :bn<CR>
+noremap <C-b>p :bp<CR>
+noremap <C-b>d :bdelete<CR>
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             常用插件安装             +
 " ++++++++++++++++++++++++++++++++++++++++
 
 
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
 
 " themes
-Plugin 'bling/vim-airline'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'bronson/vim-trailing-whitespace'
+Plug 'bling/vim-airline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'bronson/vim-trailing-whitespace'
 
 " auto complete
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'Valloric/YouCompleteMe'
 
 " parenthes
-Plugin 'Raimondi/delimitMate'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
+Plug 'Raimondi/delimitMate'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 " project manager
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tacahiroy/ctrlp-funky'
+Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
+Plug 'kien/ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'dyng/ctrlsf.vim'
+Plug 'terryma/vim-multiple-cursors'
 
 " commenter
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'DoxygenToolkit.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'DoxygenToolkit.vim'
 
 " cpp dev
-Plugin 'derekwyatt/vim-fswitch'
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plug 'derekwyatt/vim-fswitch'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'Chiel92/vim-autoformat'
 
-" more powerfual tools
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-fugitive'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'majutsushi/tagbar'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'godlygeek/tabular'
-Plugin 'sjl/gundo.vim'
-Plugin 'mileszs/ack.vim'
+" git
+Plug 'tpope/vim-fugitive'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+" easy movement
+Plug 'easymotion/vim-easymotion'
+
+" for indent
+Plug 'godlygeek/tabular'
+
+" undo tree
+Plug 'sjl/gundo.vim'
+
+" todo list
+" Plug 'freitass/todo.txt-vim'
+Plug 'vitalk/vim-simple-todo'
+
+call plug#end()
 
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
@@ -197,7 +207,6 @@ source ~/.vim/pluginconfig/airline.vim
 source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/nerdtree.vim
 source ~/.vim/pluginconfig/doxygentoolkit.vim
-source ~/.vim/pluginconfig/supertab.vim
 source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/easymotion.vim
 source ~/.vim/pluginconfig/autoformat.vim
@@ -206,3 +215,5 @@ source ~/.vim/pluginconfig/fugitive.vim
 source ~/.vim/pluginconfig/gundo.vim
 source ~/.vim/pluginconfig/ack.vim
 source ~/.vim/pluginconfig/ctrlp.vim
+source ~/.vim/pluginconfig/cscope_maps.vim
+source ~/.vim/pluginconfig/ctrlsf.vim

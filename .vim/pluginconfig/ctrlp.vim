@@ -1,8 +1,9 @@
 " CtrlP "
 """""""""
 
-nnoremap <C-m> :CtrlPMRU<CR>
-nnoremap <C-b> :CtrlPBuffer<CR>
+nnoremap <Leader>p :CtrlP<CR>
+nnoremap <Leader>m :CtrlPMRU<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>f :CtrlPFunky<Cr>
 
-nnoremap <C-f> :CtrlPFunky<Cr>
 let g:ctrlp_funky_matchtype = 'path'

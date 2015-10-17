@@ -1,4 +1,4 @@
 " Gundo "
 """""""""
 
-nnoremap <Leader>gu :GundoToggle<CR>
+nnoremap <Leader>u :GundoToggle<CR>
