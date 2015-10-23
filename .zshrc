@@ -52,7 +52,7 @@ ZSH_THEME="evan"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git colored-man-pages)
 
 # User configuration
 
@@ -94,3 +94,12 @@ setopt nonomatch
 if [ -f /usr/bin/htop ]; then
     alias top=htop
 fi
+
+export JAVA_HOME=/usr/lib/jvm/java-8-sun
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+export ANDROID_SDK=/home/steven/Android/android-sdk
+export ANDROID_NDK=/home/steven/Android/android-ndk
+export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
