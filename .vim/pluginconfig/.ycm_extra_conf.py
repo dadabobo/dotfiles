@@ -63,8 +63,8 @@ flags = [
 '/usr/include/',
 '-isystem',
 '/usr/include/c++/4.8.3/',
-'-I',
-'/home/steven/Workspace/cplaydesktop/gui/include'
+'-isystem',
+'/opt/Qt5.5.1/5.5/gcc_64/include/',
 ]
 
 

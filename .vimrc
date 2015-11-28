@@ -88,7 +88,8 @@ set pastetoggle=<F3>
 au InsertLeave * set nopaste
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
-inoremap jk <Esc>
+"inoremap jk <Esc>
+inoremap <C-l> <Esc>
 
 " 绑定 space 到 : 按键
 noremap <space> :
@@ -112,16 +113,18 @@ nnoremap gl gu
 "nnoremap gj j
 
 " 输入模式下快速的移动光标
-inoremap <C-k> <Up>
-inoremap <C-j> <Down>
-inoremap <C-a> <Home>
-inoremap <C-e> <End>
+"inoremap <C-k> <Up>
+"inoremap <C-j> <Down>
+"inoremap <C-h> <Left>
+"inoremap <C-l> <Right>
+"inoremap <C-a> <Home>
+"inoremap <C-e> <End>
 
 " 命令行模式 Ctrl-j 下一条命令，Ctrl-k 上一条命令
-cnoremap <C-j> <t_kd>
-cnoremap <C-k> <t_ku>
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
+"cnoremap <C-j> <t_kd>
+"cnoremap <C-k> <t_ku>
+"cnoremap <C-a> <Home>
+"cnoremap <C-e> <End>
 
 " 使用超级用户权限编辑这个文件
 cmap sw w !sudo tee >/dev/null %
@@ -141,10 +144,8 @@ noremap <C-b>d :bdelete<CR>
 
 call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plug 'VundleVim/Vundle.vim'
-
 " themes
+Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 Plug 'bronson/vim-trailing-whitespace'
@@ -212,3 +213,4 @@ source ~/.vim/pluginconfig/ack.vim
 source ~/.vim/pluginconfig/ctrlp.vim
 source ~/.vim/pluginconfig/cscope_maps.vim
 source ~/.vim/pluginconfig/ctrlsf.vim
+source ~/.vim/pluginconfig/nerdcommenter.vim
