@@ -52,7 +52,7 @@ ZSH_THEME="evan"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo colored-man-pages)
+plugins=(git sudo)
 
 # User configuration
 
@@ -95,7 +95,7 @@ if [ -f /usr/bin/htop ]; then
     alias top=htop
 fi
 
-export JAVA_HOME=/usr/lib/jvm/java-8-sun
+export JAVA_HOME=/opt/java-8-sun
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
@@ -107,15 +107,7 @@ export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
 
 export PATH=/home/steven/Android/android-studio/bin:$PATH
 
-alias pi="ssh pi@192.168.1.28"
-
-#export PATH=$PATH:/home/steven/opt/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin
-export PATH=/home/steven/qt-6488-cross/toolchain/bin:$PATH
-
 setxkbmap -option ctrl:nocaps
 
 alias rf="source ~/.zshrc"
-
-export PATH=/opt/gradle-2.7/bin:$PATH
-
-#eval `dircolors ~/.dircolors`
+alias gnust="/usr/bin/gst"

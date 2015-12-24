@@ -141,55 +141,62 @@ noremap <C-b>d :bdelete<CR>
 " +             常用插件安装             +
 " ++++++++++++++++++++++++++++++++++++++++
 
+filetype off                  " required
 
-call plug#begin('~/.vim/plugged')
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " themes
-Plug 'altercation/vim-colors-solarized'
-Plug 'bling/vim-airline'
-Plug 'edkolev/tmuxline.vim'
-Plug 'bronson/vim-trailing-whitespace'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'bronson/vim-trailing-whitespace'
 
 " auto complete
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'Valloric/YouCompleteMe'
 
 " parenthes
-Plug 'Raimondi/delimitMate'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
+Plugin 'Raimondi/delimitMate'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 " project manager
-Plug 'scrooloose/nerdtree'
-Plug 'majutsushi/tagbar'
-Plug 'kien/ctrlp.vim'
-Plug 'tacahiroy/ctrlp-funky'
-Plug 'dyng/ctrlsf.vim'
-Plug 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'dyng/ctrlsf.vim'
+Plugin 'terryma/vim-multiple-cursors'
 
 " commenter
-Plug 'scrooloose/nerdcommenter'
-Plug 'DoxygenToolkit.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'DoxygenToolkit.vim'
 
 " cpp dev
-Plug 'derekwyatt/vim-fswitch'
-Plug 'Chiel92/vim-autoformat'
+Plugin 'derekwyatt/vim-fswitch'
+Plugin 'Chiel92/vim-autoformat'
 
 " git
-Plug 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " easy movement
-Plug 'easymotion/vim-easymotion'
+Plugin 'easymotion/vim-easymotion'
 
 " for indent
-Plug 'godlygeek/tabular'
+Plugin 'godlygeek/tabular'
+
+" markdown
+Plugin 'plasticboy/vim-markdown'
 
 " todo list
-Plug 'vitalk/vim-simple-todo'
+Plugin 'vitalk/vim-simple-todo'
 
-call plug#end()
+call vundle#end()
+filetype plugin indent on
 
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
