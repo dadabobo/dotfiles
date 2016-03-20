@@ -188,7 +188,10 @@ Plugin 'DoxygenToolkit.vim'
 
 " cpp dev
 Plugin 'derekwyatt/vim-fswitch'
-Plugin 'Chiel92/vim-autoformat'
+"Plugin 'Chiel92/vim-autoformat'
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+Plugin 'google/vim-glaive'
 
 " git
 Plugin 'tpope/vim-fugitive'
