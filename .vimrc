@@ -34,8 +34,8 @@ set cino=(0,W4
 filetype plugin indent on
 
 " 改变超过 80 个字符之后的区域，这样就可以起到提示作用
-set colorcolumn=81
-set textwidth=80
+set colorcolumn=80
+set textwidth=79
 set fo+=mB
 set wrap
 
@@ -48,6 +48,7 @@ set cursorline
 
 " 智能补全命令行
 set wildmenu
+set wildmode=full
 
 " 不使用代码折叠功能
 set foldmethod=syntax
@@ -88,8 +89,8 @@ set pastetoggle=<F3>
 au InsertLeave * set nopaste
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
-"inoremap jk <Esc>
-inoremap <C-l> <Esc>
+inoremap jk <Esc>
+" inoremap <C-l> <Esc>
 
 " 绑定 space 到 : 按键
 noremap <space> :
@@ -154,14 +155,17 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'bling/vim-airline'
-Plugin 'edkolev/tmuxline.vim'
 Plugin 'bronson/vim-trailing-whitespace'
+
+" tmux
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " auto complete
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-unimpaired'
 
 " parenthes
 Plugin 'Raimondi/delimitMate'
