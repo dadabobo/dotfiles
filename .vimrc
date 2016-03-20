@@ -1,7 +1,7 @@
 " ++++++++++++++++++++++++++++++++++++++++
 " +         name: .vimrc                 +
 " +         author: steven guo           +
-" +         last update: 2015-8-30       +
+" +         last update: 2016-03-20      +
 " ++++++++++++++++++++++++++++++++++++++++
 
 
@@ -152,7 +152,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " themes
-" Plugin 'altercation/vim-colors-solarized'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -215,6 +216,7 @@ filetype plugin indent on
 " +       	     插件配置               +
 " +++++++++++++++++++++++++++++++++++++++
 
+source ~/.vim/pluginconfig/colorscheme.vim
 source ~/.vim/pluginconfig/airline.vim
 source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/nerdtree.vim
