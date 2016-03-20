@@ -73,15 +73,13 @@ set scrolloff=10
 autocmd! bufwritepost _vimrc source %
 autocmd! bufwritepost .vimrc source %
 
-"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
-set completeopt=longest,menu
-
 " ++++++++++++++++++++++++++++++++++++++++
 " +             快捷键配置               +
 " ++++++++++++++++++++++++++++++++++++++++
 
-map <F2> :set number! number?<cr>
-map <F4> :set hlsearch! hlsearch?<cr>
+nnoremap <F1> :FormatCode<cr>
+nnoremap <F2> :set number! number?<cr>
+nnoremap <F4> :set hlsearch! hlsearch?<cr>
 
 nnoremap <F9> :TagbarToggle<cr>
 
@@ -100,8 +98,8 @@ noremap H ^
 noremap L $
 
 " 重新绑定大小写转换功能的快捷键
-nnoremap gu gU
-nnoremap gl gu
+"nnoremap gu gU
+"nnoremap gl gu
 
 " 调换 a 和 A 的功能
 "nnoremap a A
@@ -188,7 +186,10 @@ Plugin 'DoxygenToolkit.vim'
 
 " cpp dev
 Plugin 'derekwyatt/vim-fswitch'
-Plugin 'Chiel92/vim-autoformat'
+"Plugin 'Chiel92/vim-autoformat'
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+Plugin 'google/vim-glaive'
 
 " git
 Plugin 'tpope/vim-fugitive'

@@ -1,7 +1,7 @@
 " youcompleteme "
 """""""""""""""""
 
-let g:ycm_global_ycm_extra_conf="/home/steven/.vim/pluginconfig/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf="/home/guorongfei/.vim/pluginconfig/.ycm_extra_conf.py"
 
 set completeopt=longest,menu
 

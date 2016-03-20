@@ -78,10 +78,11 @@ def install_required_softwares():
         "autojump"  : "autojump"
         "zsh"       : "zsh"
         "tmux"      : "tmux"
+        "clangfmt"  : "clang-format-3.7"
     }
     excute_and_echo("sudo apt-get install {ag} {ctags} {cscope} "
                     "{cmake} {build} {pythondev} {pip3} {autojump} "
-                    "{zsh} {tmux}".format(**softwarename))
+                    "{zsh} {tmux} {clangfmt}".format(**softwarename))
 
 def config_zsh():
     pass
