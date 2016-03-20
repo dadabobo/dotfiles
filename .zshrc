@@ -7,8 +7,8 @@ export ZSH=/home/steven/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="frisk"
 #ZSH_THEME="norm"
-ZSH_THEME="evan"
-#ZSH_THEME="robbyrussell"
+#ZSH_THEME="evan"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,7 +52,7 @@ ZSH_THEME="evan"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo)
+plugins=(git sudo autojump)
 
 # User configuration
 
@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export TERM=xterm-256color
+eval `dircolors -b $HOME/.dircolors`
 export EDITOR=vim
 
 setopt nonomatch
@@ -110,4 +111,5 @@ export PATH=/home/steven/Android/android-studio/bin:$PATH
 setxkbmap -option ctrl:nocaps
 
 alias rf="source ~/.zshrc"
+alias cls="clear"
 alias gnust="/usr/bin/gst"
