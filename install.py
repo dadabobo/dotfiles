@@ -23,7 +23,7 @@ def excute_and_echo(cmd):
     print(cmd)
     os.system(cmd)
 
-def install_vim_plugins():
+def config_vim():
     """
     Configue Vim with the script from this repo.
 
@@ -58,7 +58,12 @@ def install_vim_plugins():
         print("STEP {}: {}".format(i+1), end='')
         excute_and_echo(cmd)
 
-def install_softwares():
+    # compile youcompleteme
+    with cd("{}/.vim/bundle/YouCompleteMe/".format(cwd)):
+        excute_and_echo("git submodule update --init --recursive")
+        excute_and_echo("./install.py --clang-completer")
+
+def install_required_softwares():
     """
     Install the required software that make plugin works.
     """
@@ -70,19 +75,25 @@ def install_softwares():
         "build"     : "build-essential",
         "pythondev" : "python-dev",
         "pip3"      : "python3-pip"
+        "autojump"  : "autojump"
+        "zsh"       : "zsh"
+        "tmux"      : "tmux"
     }
     excute_and_echo("sudo apt-get install {ag} {ctags} {cscope} "
-                    "{cmake} {build} {pythondev} {pip3}"\
-                    .format(**softwarename))
+                    "{cmake} {build} {pythondev} {pip3} {autojump} "
+                    "{zsh} {tmux}".format(**softwarename))
 
-    # compile youcompleteme
-    with cd("{}/.vim/bundle/YouCompleteMe/".format(cwd)):
-        excute_and_echo("git submodule update --init --recursive")
-        excute_and_echo("./install.py --clang-completer")
+def config_zsh():
+    pass
+
+def config_tmux():
+    pass
 
 def install_dotfiles():
-    # install_vim_plugins()
-    install_softwares()
+    install_required_softwares()
+    config_vim()
+    config_zsh()
+    config_tmux()
 
 def remove_dotfiles():
     cmd_list = []
