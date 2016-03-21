@@ -13,7 +13,7 @@
 set nocompatible
 
 " 默认不显示行号
-set nonumber
+set number
 
 " 搜索设置
 set ic
@@ -22,11 +22,8 @@ set nohlsearch
 " 默认开启语法高亮
 syntax on
 
-" TAB 缩进设置
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+" expand tab as space
+setlocal expandtab
 
 " 缩进设置，设置基于文件的类型的缩进
 set autoindent
@@ -70,21 +67,27 @@ set backspace=eol,start,indent
 set scrolloff=10
 
 " vimrc文件修改之后自动加载
-autocmd! bufwritepost _vimrc source %
-autocmd! bufwritepost .vimrc source %
+"autocmd! bufwritepost _vimrc source %
+"autocmd! bufwritepost .vimrc source %
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             快捷键配置               +
 " ++++++++++++++++++++++++++++++++++++++++
 
 nnoremap <F1> :FormatCode<cr>
-nnoremap <F2> :set number! number?<cr>
-nnoremap <F4> :set hlsearch! hlsearch?<cr>
+nnoremap <F2> :set number!<cr>
+nnoremap <F3> :set paste!<cr>
+nnoremap <F4> :set hlsearch!<cr>
 
 nnoremap <F9> :TagbarToggle<cr>
+nnoremap <F10> :NERDTreeToggle<cr>
 
-set pastetoggle=<F3>
-au InsertLeave * set nopaste
+" insert current time
+nnoremap <F12> "=strftime("%F")<CR>gP
+inoremap <F12> <C-R>=strftime("%F")<CR>
+
+" 直接使用 yo 命令就可以了
+"au InsertLeave * set nopaste
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
 inoremap jk <Esc>
@@ -132,9 +135,9 @@ cmap sw w !sudo tee >/dev/null %
 let mapleader = ';'
 
 " 使用方向键切换 buffer
-noremap <C-b>n :bn<CR>
-noremap <C-b>p :bp<CR>
-noremap <C-b>d :bdelete<CR>
+"noremap <C-b>n :bn<CR>
+"noremap <C-b>p :bp<CR>
+"noremap <C-b>d :bdelete<CR>
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             常用插件安装             +
@@ -158,7 +161,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 
 " tmux
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'christoomey/vim-tmux-navigator'
 
 " auto complete
 Plugin 'SirVer/ultisnips'
@@ -190,6 +193,9 @@ Plugin 'derekwyatt/vim-fswitch'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmt'
 Plugin 'google/vim-glaive'
+
+" python
+Plugin 'nvie/vim-flake8'
 
 " git
 Plugin 'tpope/vim-fugitive'
@@ -233,3 +239,4 @@ source ~/.vim/pluginconfig/ctrlp.vim
 source ~/.vim/pluginconfig/cscope_maps.vim
 source ~/.vim/pluginconfig/ctrlsf.vim
 source ~/.vim/pluginconfig/nerdcommenter.vim
+source ~/.vim/pluginconfig/flake8.vim

@@ -8,6 +8,8 @@ let g:airline_left_alt_sep = '>'
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = '<'
 
+"let g:airline_theme = "dark"
+"let g:airline_theme = "badwolf"
 "let g:airline_theme = "molokai"
 let g:airline_theme = "tomorrow"
 "let g:airline_theme = "base16"
