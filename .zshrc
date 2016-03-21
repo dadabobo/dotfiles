@@ -113,3 +113,6 @@ setxkbmap -option ctrl:nocaps
 alias rf="source ~/.zshrc"
 alias cls="clear"
 alias gnust="/usr/bin/gst"
+
+[[ -s /home/guorongfei/.autojump/etc/profile.d/autojump.sh ]] && source /home/guorongfei/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
