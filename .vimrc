@@ -78,9 +78,9 @@ set scrolloff=10
 " ++++++++++++++++++++++++++++++++++++++++
 
 nnoremap <F1> :FormatCode<cr>
-nnoremap <F2> :set number! number?<cr>
-nnoremap <F3> :set paste! paste?<cr>
-nnoremap <F4> :set hlsearch! hlsearch?<cr>
+nnoremap <F2> :set number!<cr>
+nnoremap <F3> :set paste!<cr>
+nnoremap <F4> :set hlsearch!<cr>
 
 nnoremap <F9> :TagbarToggle<cr>
 nnoremap <F10> :NERDTreeToggle<cr>
