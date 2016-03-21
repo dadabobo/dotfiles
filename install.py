@@ -74,27 +74,48 @@ def install_required_softwares():
         "cmake"     : "cmake",
         "build"     : "build-essential",
         "pythondev" : "python-dev",
-        "pip3"      : "python3-pip"
-        "autojump"  : "autojump"
-        "zsh"       : "zsh"
-        "tmux"      : "tmux"
-        "clangfmt"  : "clang-format-3.7"
+        "pip2"      : "python-pip",
+        "pip3"      : "python3-pip",
+        "zsh"       : "zsh",
+        "tmux"      : "tmux",
+        "clangfmt"  : "clang-format-3.7",
     }
     excute_and_echo("sudo apt-get install {ag} {ctags} {cscope} "
-                    "{cmake} {build} {pythondev} {pip3} {autojump} "
+                    "{cmake} {build} {pythondev} {pip3} {pip2} "
                     "{zsh} {tmux} {clangfmt}".format(**softwarename))
 
+    pipsofts = {
+        "flake8" : "flake8",
+        "autopep8" : "autopep8",
+        "musicbox" : "NetEase-MusicBox",
+    }
+    excute_and_echo("sudo pip install --upgrade {flake8} "
+                    "{autopep8} {musicbox}".format(**pipsofts))
+
 def config_zsh():
-    pass
+    import tempfile
+    tempdir = tempfile.mkdtemp()
+    with cd(tempdir):
+        source = "https://github.com/wting/autojump.git"
+        dest = "autojump"
+        excute_and_echo("git clone {} {}".format(source, dest))
+        with cd(dest):
+            excute_and_echo("./install.py")
+
+    fname = "/.zshrc"
+    zshrc = home_path + fname
+    if os.path.lexists(dest_file):
+        cmd_list.append("mv {0} {0}.bak".format(zshrc))
+    cmd_list.append("ln -s {}/{} {}".format(cwd, fname, zshrc))
 
 def config_tmux():
     pass
 
 def install_dotfiles():
     install_required_softwares()
-    config_vim()
-    config_zsh()
-    config_tmux()
+    # config_vim()
+    # config_zsh()
+    # config_tmux()
 
 def remove_dotfiles():
     cmd_list = []
