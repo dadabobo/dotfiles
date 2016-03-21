@@ -22,11 +22,8 @@ set nohlsearch
 " 默认开启语法高亮
 syntax on
 
-" TAB 缩进设置
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+" expand tab as space
+setlocal expandtab
 
 " 缩进设置，设置基于文件的类型的缩进
 set autoindent
