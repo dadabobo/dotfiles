@@ -13,7 +13,7 @@
 set nocompatible
 
 " 默认不显示行号
-set nonumber
+set number
 
 " 搜索设置
 set ic
@@ -85,7 +85,8 @@ nnoremap <F4> :set hlsearch! hlsearch?<cr>
 nnoremap <F9> :TagbarToggle<cr>
 nnoremap <F10> :NERDTreeToggle<cr>
 
-au InsertLeave * set nopaste
+" 直接使用 yo 命令就可以了
+"au InsertLeave * set nopaste
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
 inoremap jk <Esc>
