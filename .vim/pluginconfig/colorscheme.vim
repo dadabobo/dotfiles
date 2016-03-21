@@ -3,4 +3,5 @@
 
 syntax enable
 set background=dark
-colorscheme molokai
+"colorscheme molokai
+colorscheme badwolf

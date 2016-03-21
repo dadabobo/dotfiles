@@ -79,11 +79,12 @@ autocmd! bufwritepost .vimrc source %
 
 nnoremap <F1> :FormatCode<cr>
 nnoremap <F2> :set number! number?<cr>
+nnoremap <F3> :set paste! paste?<cr>
 nnoremap <F4> :set hlsearch! hlsearch?<cr>
 
 nnoremap <F9> :TagbarToggle<cr>
+nnoremap <F10> :NERDTreeToggle<cr>
 
-set pastetoggle=<F3>
 au InsertLeave * set nopaste
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
@@ -132,9 +133,9 @@ cmap sw w !sudo tee >/dev/null %
 let mapleader = ';'
 
 " 使用方向键切换 buffer
-noremap <C-b>n :bn<CR>
-noremap <C-b>p :bp<CR>
-noremap <C-b>d :bdelete<CR>
+"noremap <C-b>n :bn<CR>
+"noremap <C-b>p :bp<CR>
+"noremap <C-b>d :bdelete<CR>
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             常用插件安装             +
