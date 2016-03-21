@@ -160,7 +160,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 
 " tmux
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'christoomey/vim-tmux-navigator'
 
 " auto complete
 Plugin 'SirVer/ultisnips'
@@ -192,6 +192,9 @@ Plugin 'derekwyatt/vim-fswitch'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmt'
 Plugin 'google/vim-glaive'
+
+" python
+Plugin 'nvie/vim-flake8'
 
 " git
 Plugin 'tpope/vim-fugitive'
@@ -235,3 +238,4 @@ source ~/.vim/pluginconfig/ctrlp.vim
 source ~/.vim/pluginconfig/cscope_maps.vim
 source ~/.vim/pluginconfig/ctrlsf.vim
 source ~/.vim/pluginconfig/nerdcommenter.vim
+source ~/.vim/pluginconfig/flake8.vim
