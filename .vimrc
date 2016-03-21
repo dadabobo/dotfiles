@@ -70,8 +70,8 @@ set backspace=eol,start,indent
 set scrolloff=10
 
 " vimrc文件修改之后自动加载
-autocmd! bufwritepost _vimrc source %
-autocmd! bufwritepost .vimrc source %
+"autocmd! bufwritepost _vimrc source %
+"autocmd! bufwritepost .vimrc source %
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             快捷键配置               +
@@ -84,6 +84,10 @@ nnoremap <F4> :set hlsearch! hlsearch?<cr>
 
 nnoremap <F9> :TagbarToggle<cr>
 nnoremap <F10> :NERDTreeToggle<cr>
+
+" insert current time
+nnoremap <F12> "=strftime("%F")<CR>gP
+inoremap <F12> <C-R>=strftime("%F")<CR>
 
 " 直接使用 yo 命令就可以了
 "au InsertLeave * set nopaste
