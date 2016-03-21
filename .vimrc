@@ -129,7 +129,7 @@ noremap L $
 "cnoremap <C-e> <End>
 
 " 使用超级用户权限编辑这个文件
-cmap sw w !sudo tee >/dev/null %
+cmap w!! w !sudo tee >/dev/null %
 
 " 修改leader键
 let mapleader = ';'
@@ -138,6 +138,8 @@ let mapleader = ';'
 "noremap <C-b>n :bn<CR>
 "noremap <C-b>p :bp<CR>
 "noremap <C-b>d :bdelete<CR>
+
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             常用插件安装             +
