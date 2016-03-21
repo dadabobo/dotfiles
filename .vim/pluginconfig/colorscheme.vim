@@ -4,4 +4,5 @@
 syntax enable
 set background=dark
 "colorscheme molokai
-colorscheme badwolf
+"colorscheme badwolf
+colorscheme Tomorrow-Night
