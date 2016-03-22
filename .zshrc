@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/guorongfei/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -101,12 +101,12 @@ export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
 
-export ANDROID_SDK=/home/steven/Android/android-sdk
-export ANDROID_NDK=/home/steven/Android/android-ndk
+export ANDROID_SDK=$HOME/Android/android-sdk
+export ANDROID_NDK=$HOME/Android/android-ndk
 export ANDROID_ABI=armeabi-v7a
 export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
 
-export PATH=/home/steven/Android/android-studio/bin:$PATH
+export PATH=$HOME/Android/android-studio/bin:$PATH
 
 setxkbmap -option ctrl:nocaps
 
@@ -114,5 +114,5 @@ alias rf="source ~/.zshrc"
 alias cls="clear"
 alias gnust="/usr/bin/gst"
 
-[[ -s /home/guorongfei/.autojump/etc/profile.d/autojump.sh ]] && source /home/guorongfei/.autojump/etc/profile.d/autojump.sh
+[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
