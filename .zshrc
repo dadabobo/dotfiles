@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #export TERM="screen-256color"
-eval `dircolors -b $HOME/.dircolors`
+#eval `dircolors -b $HOME/.dircolors`
 export EDITOR=vim
 
 setopt nonomatch
