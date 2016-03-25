@@ -136,6 +136,8 @@ cmap w!! w !sudo tee >/dev/null %
 
 " 修改leader键
 let mapleader = ';'
+noremap , ;
+noremap \ ,
 
 " 使用方向键切换 buffer
 "noremap <C-b>n :bn<CR>
