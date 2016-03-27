@@ -174,13 +174,11 @@ Plugin 'bronson/vim-trailing-whitespace'
 
 " tmux
 Plugin 'edkolev/tmuxline.vim'
-"Plugin 'christoomey/vim-tmux-navigator'
 
 " auto complete
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'tpope/vim-unimpaired'
 
 " parenthes
 Plugin 'Raimondi/delimitMate'
@@ -202,19 +200,17 @@ Plugin 'DoxygenToolkit.vim'
 
 " cpp dev
 Plugin 'derekwyatt/vim-fswitch'
-"Plugin 'Chiel92/vim-autoformat'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmt'
 Plugin 'google/vim-glaive'
+Plugin 'Mizuchi/STL-Syntax'
 
 " python
 Plugin 'nvie/vim-flake8'
 
 " git
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-
-" easy movement
-"Plugin 'easymotion/vim-easymotion'
 
 " for indent
 Plugin 'godlygeek/tabular'
@@ -224,6 +220,13 @@ Plugin 'plasticboy/vim-markdown'
 
 " todo list
 Plugin 'vitalk/vim-simple-todo'
+
+" text-object
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-entire'
+Plugin 'lucapette/vim-textobj-underscore'
+Plugin 'kana/vim-textobj-line'
+Plugin 'kana/vim-textobj-indent'
 
 call vundle#end()
 filetype plugin indent on
@@ -236,7 +239,7 @@ filetype plugin indent on
 " +		 插件配置               +
 " +++++++++++++++++++++++++++++++++++++++
 
-source ~/.vim/pluginconfig/colorscheme.vim
+"source ~/.vim/pluginconfig/colorscheme.vim
 source ~/.vim/pluginconfig/airline.vim
 source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/nerdtree.vim
@@ -253,3 +256,4 @@ source ~/.vim/pluginconfig/cscope_maps.vim
 source ~/.vim/pluginconfig/ctrlsf.vim
 source ~/.vim/pluginconfig/nerdcommenter.vim
 source ~/.vim/pluginconfig/flake8.vim
+source ~/.vim/pluginconfig/visual-star.vim
