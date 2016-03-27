@@ -68,7 +68,7 @@ set guioptions-=L  "remove left-hand scroll bar
 set backspace=eol,start,indent
 
 " 滚动的时候保留的行数
-set scrolloff=10
+"set scrolloff=10
 
 " vimrc文件修改之后自动加载
 "autocmd! bufwritepost _vimrc source %
@@ -175,8 +175,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'kshenoy/vim-signature'
-
-" tmux
 Plugin 'edkolev/tmuxline.vim'
 
 " auto complete
@@ -232,6 +230,9 @@ Plugin 'lucapette/vim-textobj-underscore'
 Plugin 'kana/vim-textobj-line'
 Plugin 'kana/vim-textobj-indent'
 
+" other
+Plugin 'tpope/vim-unimpaired'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -249,7 +250,6 @@ source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/nerdtree.vim
 source ~/.vim/pluginconfig/doxygentoolkit.vim
 source ~/.vim/pluginconfig/ultisnips.vim
-"source ~/.vim/pluginconfig/easymotion.vim
 source ~/.vim/pluginconfig/autoformat.vim
 source ~/.vim/pluginconfig/youcompleteme.vim
 source ~/.vim/pluginconfig/fugitive.vim
