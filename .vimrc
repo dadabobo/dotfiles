@@ -150,6 +150,9 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " +             常用插件安装             +
 " ++++++++++++++++++++++++++++++++++++++++
 
+" enable matchit
+runtime macro/matchit.vim
+
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -165,6 +168,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'kshenoy/vim-signature'
 
 " tmux
 Plugin 'edkolev/tmuxline.vim'
