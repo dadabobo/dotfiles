@@ -243,7 +243,7 @@ filetype plugin indent on
 " +		 插件配置               +
 " +++++++++++++++++++++++++++++++++++++++
 
-"source ~/.vim/pluginconfig/colorscheme.vim
+source ~/.vim/pluginconfig/colorscheme.vim
 source ~/.vim/pluginconfig/airline.vim
 source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/nerdtree.vim
