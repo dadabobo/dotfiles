@@ -111,6 +111,9 @@ noremap L $
 "nnoremap a A
 "nnoremap A a
 
+nnoremap ' `
+nnoremap ` '
+
 " 物理行上直接切换
 "nnoremap k gk
 "nnoremap gk k
