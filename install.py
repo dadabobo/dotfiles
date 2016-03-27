@@ -81,13 +81,15 @@ def install_required_softwares():
         "pip2": "python-pip",
         "pip3": "python3-pip",
         "zsh": "zsh",
+        "fish": "fish",
         "tmux": "tmux",
         "clangfmt": "clang-format-3.7",
         "mpg123": "mpg123",
     }
     excute_and_echo("sudo apt-get install {ag} {ctags} {cscope} "
                     "{cmake} {build} {pythondev} {pip3} {pip2} "
-                    "{zsh} {tmux} {clangfmt} {mpg123}".format(**softwarename))
+                    "{zsh} {fish} {tmux} {clangfmt} {mpg123}"
+                    .format(**softwarename))
 
     pipsofts = {
         "flake8": "flake8",
