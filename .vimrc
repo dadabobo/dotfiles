@@ -233,7 +233,7 @@ filetype plugin indent on
 
 
 " +++++++++++++++++++++++++++++++++++++++
-" +       	     插件配置               +
+" +		 插件配置               +
 " +++++++++++++++++++++++++++++++++++++++
 
 source ~/.vim/pluginconfig/colorscheme.vim
