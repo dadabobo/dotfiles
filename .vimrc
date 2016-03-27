@@ -16,8 +16,9 @@ set nocompatible
 set number
 
 " 搜索设置
-set ic
-set nohlsearch
+set ignorecase
+set incsearch
+set hlsearch
 
 " 默认开启语法高亮
 syntax on
@@ -89,6 +90,8 @@ nnoremap <F10> :NERDTreeToggle<cr>
 nnoremap <F12> "=strftime("%F")<CR>gP
 inoremap <F12> <C-R>=strftime("%F")<CR>
 
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
 " 直接使用 yo 命令就可以了
 "au InsertLeave * set nopaste
 
@@ -110,6 +113,9 @@ noremap L $
 " 调换 a 和 A 的功能
 "nnoremap a A
 "nnoremap A a
+
+nnoremap ' `
+nnoremap ` '
 
 " 物理行上直接切换
 "nnoremap k gk
@@ -172,13 +178,11 @@ Plugin 'kshenoy/vim-signature'
 
 " tmux
 Plugin 'edkolev/tmuxline.vim'
-"Plugin 'christoomey/vim-tmux-navigator'
 
 " auto complete
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'tpope/vim-unimpaired'
 
 " parenthes
 Plugin 'Raimondi/delimitMate'
@@ -200,19 +204,17 @@ Plugin 'DoxygenToolkit.vim'
 
 " cpp dev
 Plugin 'derekwyatt/vim-fswitch'
-"Plugin 'Chiel92/vim-autoformat'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmt'
 Plugin 'google/vim-glaive'
+Plugin 'Mizuchi/STL-Syntax'
 
 " python
 Plugin 'nvie/vim-flake8'
 
 " git
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-
-" easy movement
-Plugin 'easymotion/vim-easymotion'
 
 " for indent
 Plugin 'godlygeek/tabular'
@@ -223,6 +225,13 @@ Plugin 'plasticboy/vim-markdown'
 " todo list
 Plugin 'vitalk/vim-simple-todo'
 
+" text-object
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-entire'
+Plugin 'lucapette/vim-textobj-underscore'
+Plugin 'kana/vim-textobj-line'
+Plugin 'kana/vim-textobj-indent'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -231,16 +240,16 @@ filetype plugin indent on
 
 
 " +++++++++++++++++++++++++++++++++++++++
-" +       	     插件配置               +
+" +		 插件配置               +
 " +++++++++++++++++++++++++++++++++++++++
 
-source ~/.vim/pluginconfig/colorscheme.vim
+"source ~/.vim/pluginconfig/colorscheme.vim
 source ~/.vim/pluginconfig/airline.vim
 source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/nerdtree.vim
 source ~/.vim/pluginconfig/doxygentoolkit.vim
 source ~/.vim/pluginconfig/ultisnips.vim
-source ~/.vim/pluginconfig/easymotion.vim
+"source ~/.vim/pluginconfig/easymotion.vim
 source ~/.vim/pluginconfig/autoformat.vim
 source ~/.vim/pluginconfig/youcompleteme.vim
 source ~/.vim/pluginconfig/fugitive.vim
@@ -251,3 +260,4 @@ source ~/.vim/pluginconfig/cscope_maps.vim
 source ~/.vim/pluginconfig/ctrlsf.vim
 source ~/.vim/pluginconfig/nerdcommenter.vim
 source ~/.vim/pluginconfig/flake8.vim
+source ~/.vim/pluginconfig/visual-star.vim
