@@ -96,7 +96,7 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 "au InsertLeave * set nopaste
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
-inoremap jk <Esc>
+"inoremap jk <Esc>
 " inoremap <C-l> <Esc>
 
 " 绑定 space 到 : 按键
@@ -106,6 +106,25 @@ noremap <space> :
 noremap H ^
 noremap L $
 
+" 交换 ' 和 ` 的功能
+nnoremap ' `
+nnoremap ` '
+
+" 使用超级用户权限编辑这个文件
+cmap w!! w !sudo tee >/dev/null %
+
+" 修改leader键
+let mapleader = ';'
+noremap , ;
+noremap \ ,
+
+" 使用 %% 扩展当前文件的路径
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" 使得 & 命令能够重复上一次的命令，包括 flag
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
+
 " 重新绑定大小写转换功能的快捷键
 "nnoremap gu gU
 "nnoremap gl gu
@@ -113,9 +132,6 @@ noremap L $
 " 调换 a 和 A 的功能
 "nnoremap a A
 "nnoremap A a
-
-nnoremap ' `
-nnoremap ` '
 
 " 物理行上直接切换
 "nnoremap k gk
@@ -137,20 +153,10 @@ nnoremap ` '
 "cnoremap <C-a> <Home>
 "cnoremap <C-e> <End>
 
-" 使用超级用户权限编辑这个文件
-cmap w!! w !sudo tee >/dev/null %
-
-" 修改leader键
-let mapleader = ';'
-noremap , ;
-noremap \ ,
-
 " 使用方向键切换 buffer
 "noremap <C-b>n :bn<CR>
 "noremap <C-b>p :bp<CR>
 "noremap <C-b>d :bdelete<CR>
-
-cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             常用插件安装             +
