@@ -165,82 +165,70 @@ xnoremap & :&&<CR>
 " enable matchit
 runtime macro/matchit.vim
 
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " themes
-Plugin 'flazz/vim-colorschemes'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'kshenoy/vim-signature'
-Plugin 'edkolev/tmuxline.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'kshenoy/vim-signature'
+Plug 'edkolev/tmuxline.vim'
 
 " auto complete
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'Valloric/YouCompleteMe'
 
 " parenthes
-Plugin 'Raimondi/delimitMate'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 " project manager
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'dyng/ctrlsf.vim'
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'majutsushi/tagbar'
+Plug 'kien/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
+Plug 'dyng/ctrlsf.vim'
+Plug 'terryma/vim-multiple-cursors'
 
 " commenter
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'DoxygenToolkit.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'DoxygenToolkit.vim'
 
 " cpp dev
-Plugin 'derekwyatt/vim-fswitch'
-Plugin 'google/vim-maktaba'
-Plugin 'google/vim-codefmt'
-Plugin 'google/vim-glaive'
-Plugin 'Mizuchi/STL-Syntax'
+Plug 'derekwyatt/vim-fswitch', {'for': ['cpp', 'c']}
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt', {'for': ['python', 'c', 'cpp']}
+Plug 'google/vim-glaive'
+Plug 'Mizuchi/STL-Syntax', {'for': 'cpp'}
 
 " python
-Plugin 'nvie/vim-flake8'
+Plug 'nvie/vim-flake8', {'for': 'python'}
 
 " git
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 " for indent
-Plugin 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 
 " markdown
-Plugin 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 
 " todo list
-Plugin 'vitalk/vim-simple-todo'
+Plug 'vitalk/vim-simple-todo', {'for': 'markdown'}
 
 " text-object
-Plugin 'kana/vim-textobj-user'
-Plugin 'kana/vim-textobj-entire'
-Plugin 'lucapette/vim-textobj-underscore'
-Plugin 'kana/vim-textobj-line'
-Plugin 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-user' | Plug 'kana/vim-textobj-entire'
+Plug 'lucapette/vim-textobj-underscore', {'for': ['python', 'cpp', 'c']}
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-indent', {'for': 'python'}
 
 " other
-Plugin 'tpope/vim-unimpaired'
+Plug 'tpope/vim-unimpaired'
 
-call vundle#end()
-filetype plugin indent on
+" Add plugins to &runtimepath
+call plug#end()
 
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
