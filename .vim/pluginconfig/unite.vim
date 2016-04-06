@@ -9,16 +9,22 @@ call unite#custom#profile('default', 'context', {
     \ })
 
 let g:unite_source_menu_menus = {}
-let g:unite_source_menu_menus.vimrc = {
-    \ 'description' : 'vimrc menus for daliy work',
+let g:unite_source_menu_menus.main = {
+    \ 'description' : 'main menus for daliy work',
     \}
-let g:unite_source_menu_menus.vimrc.command_candidates = [
-        \[' + edit vimrc', 'e $MYVIMRC'],
-        \[' + source vimrc', 'so $MYVIMRC'],
-        \[' + source current', 'so %'],
+let g:unite_source_menu_menus.main.command_candidates = [
+        \[' + (e)dit vimrc'       , 'e $MYVIMRC']  ,
+        \[' + (q)uit & save'      , 'x']           ,
+        \[' + (s)ource (v)imrc'   , 'so $MYVIMRC'] ,
+        \[' + (s)ource curren(t)' , 'so %']        ,
+        \[' + (f)ormat (c)ode'    , 'FormatCode']  ,
+        \[' + (f)ormat (l)ine'    , 'FormatLines'] ,
+        \[' + (p)lugin in(s)tall' , 'PlugInstall'] ,
+        \[' + (p)lugin u(p)date'  , 'PlugUpdate']  ,
+        \[' + (p)lugin (c)lean'   , 'PlugClean']   ,
     \]
 
 " for fuzzy match
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
-nnoremap <silent> <C-m> :Unite -buffer-name=vimrc menu:vimrc <CR>
+nnoremap <silent> <C-m> :Unite -buffer-name=mainmenu menu:main <CR>
