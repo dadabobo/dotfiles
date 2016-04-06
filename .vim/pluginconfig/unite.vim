@@ -22,6 +22,7 @@ let g:unite_source_menu_menus.main.command_candidates = [
         \[' + (p)lugin in(s)tall' , 'PlugInstall'] ,
         \[' + (p)lugin u(p)date'  , 'PlugUpdate']  ,
         \[' + (p)lugin (c)lean'   , 'PlugClean']   ,
+        \[' + (t)oogle n(u)mber'  , 'set number!'] ,
     \]
 
 " for fuzzy match
