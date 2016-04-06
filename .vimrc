@@ -227,6 +227,7 @@ Plug 'kana/vim-textobj-indent', {'for': 'python'}
 " other
 Plug 'tpope/vim-unimpaired'
 Plug 'Shougo/unite.vim'
+Plug 'zoncoen/unite-autojump'
 
 " Add plugins to &runtimepath
 call plug#end()

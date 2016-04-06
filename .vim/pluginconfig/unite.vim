@@ -28,3 +28,4 @@ let g:unite_source_menu_menus.main.command_candidates = [
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 nnoremap <silent> <C-m> :Unite -buffer-name=mainmenu menu:main <CR>
+nnoremap <silent> <C-j> :Unite -buffer-name=autojump autojump <CR>
