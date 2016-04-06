@@ -96,7 +96,7 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 "au InsertLeave * set nopaste
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
-"inoremap jk <Esc>
+inoremap jk <Esc>
 " inoremap <C-l> <Esc>
 
 " 绑定 space 到 : 按键
@@ -226,6 +226,7 @@ Plug 'kana/vim-textobj-indent', {'for': 'python'}
 
 " other
 Plug 'tpope/vim-unimpaired'
+Plug 'Shougo/unite.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -235,7 +236,7 @@ call plug#end()
 
 
 " +++++++++++++++++++++++++++++++++++++++
-" +		 插件配置               +
+" +		         插件配置               +
 " +++++++++++++++++++++++++++++++++++++++
 
 source ~/.vim/pluginconfig/colorscheme.vim
@@ -255,3 +256,4 @@ source ~/.vim/pluginconfig/ctrlsf.vim
 source ~/.vim/pluginconfig/nerdcommenter.vim
 source ~/.vim/pluginconfig/flake8.vim
 source ~/.vim/pluginconfig/visual-star.vim
+source ~/.vim/pluginconfig/unite.vim
