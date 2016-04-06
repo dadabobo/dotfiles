@@ -97,14 +97,14 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
 inoremap jk <Esc>
-" inoremap <C-l> <Esc>
+inoremap <C-l> <Esc>
 
 " 绑定 space 到 : 按键
 noremap <space> :
 
-" 绑定大写的 HL 为行首和行尾的快捷键，目前不再使用，因为可以通过 0，gm 替代
-"noremap H ^
-"noremap L $
+ "绑定大写的 HL 为行首和行尾的快捷键
+noremap H ^
+noremap L $
 
 " 交换 ' 和 ` 的功能
 nnoremap ' `
