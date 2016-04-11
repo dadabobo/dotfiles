@@ -228,6 +228,7 @@ Plug 'kana/vim-textobj-indent', {'for': 'python'}
 Plug 'tpope/vim-unimpaired'
 Plug 'Shougo/unite.vim'
 Plug 'zoncoen/unite-autojump'
+Plug 'triglav/vim-visual-increment'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -258,3 +259,4 @@ source ~/.vim/pluginconfig/nerdcommenter.vim
 source ~/.vim/pluginconfig/flake8.vim
 source ~/.vim/pluginconfig/visual-star.vim
 source ~/.vim/pluginconfig/unite.vim
+source ~/.vim/pluginconfig/acsnum.vim
