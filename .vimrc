@@ -212,9 +212,6 @@ Plug 'tpope/vim-fugitive'
 " for indent
 Plug 'godlygeek/tabular'
 
-" markdown
-Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
-
 " todo list
 Plug 'vitalk/vim-simple-todo', {'for': 'markdown'}
 
