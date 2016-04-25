@@ -90,14 +90,14 @@ nnoremap <F10> :NERDTreeToggle<cr>
 nnoremap <F12> "=strftime("%F")<CR>gP
 inoremap <F12> <C-R>=strftime("%F")<CR>
 
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <C-e> :<C-u>nohlsearch<CR>
 
 " 直接使用 yo 命令就可以了
 "au InsertLeave * set nopaste
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
 inoremap jk <Esc>
-inoremap <C-l> <Esc>
+"inoremap <C-l> <Esc>
 
 " 绑定 space 到 : 按键
 noremap <space> :
@@ -187,7 +187,7 @@ Plug 'tpope/vim-repeat'
 " project manager
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'majutsushi/tagbar'
-Plug 'kien/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
+Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
 
@@ -200,7 +200,10 @@ Plug 'derekwyatt/vim-fswitch', {'for': ['cpp', 'c']}
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt', {'for': ['python', 'c', 'cpp']}
 Plug 'google/vim-glaive'
-Plug 'Mizuchi/STL-Syntax', {'for': 'cpp'}
+Plug 'octol/vim-cpp-enhanced-highlight'
+"Plug 'vim-jp/vim-cpp'
+
+"Plug 'Mizuchi/STL-Syntax', {'for': 'cpp'}
 
 " python
 Plug 'nvie/vim-flake8', {'for': 'python'}
@@ -226,6 +229,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'Shougo/unite.vim'
 Plug 'zoncoen/unite-autojump'
 Plug 'triglav/vim-visual-increment'
+Plug 'mhinz/vim-startify'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -257,3 +261,4 @@ source ~/.vim/pluginconfig/flake8.vim
 source ~/.vim/pluginconfig/visual-star.vim
 source ~/.vim/pluginconfig/unite.vim
 source ~/.vim/pluginconfig/acsnum.vim
+source ~/.vim/pluginconfig/tmux-navigator.vim
