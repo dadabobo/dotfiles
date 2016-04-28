@@ -6,7 +6,7 @@
 
 
 " ++++++++++++++++++++++++++++++++++++++++
-" +   	        基础选项配置             +
+" +             基础选项配置             +
 " ++++++++++++++++++++++++++++++++++++++++
 
 " 非兼容模式
@@ -25,9 +25,9 @@ syntax on
 
 " tabs
 setlocal expandtab
-setlocal tabstop=4
 setlocal softtabstop=4
 setlocal shiftwidth=4
+setlocal tabstop=4
 
 " 缩进设置，设置基于文件的类型的缩进
 set autoindent
@@ -58,21 +58,14 @@ set nofoldenable
 " 不使用 swapfile
 set noswapfile
 
-" gui 设置
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
-
 " 删除设置
 set backspace=eol,start,indent
 
-" 滚动的时候保留的行数
-"set scrolloff=10
+" 设置隐藏字符, 通过 set list 显示
+set listchars=tab:▸\ ,eol:¬,space:·
 
-" vimrc文件修改之后自动加载
-"autocmd! bufwritepost _vimrc source %
-"autocmd! bufwritepost .vimrc source %
+" vim 类型文件设置折叠方式为 marker
+autocmd FileType vim set foldmethod=marker
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             快捷键配置               +
@@ -92,17 +85,13 @@ inoremap <F12> <C-R>=strftime("%F")<CR>
 
 nnoremap <silent> <C-e> :<C-u>nohlsearch<CR>
 
-" 直接使用 yo 命令就可以了
-"au InsertLeave * set nopaste
-
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
 inoremap jk <Esc>
-"inoremap <C-l> <Esc>
 
 " 绑定 space 到 : 按键
 noremap <space> :
 
- "绑定大写的 HL 为行首和行尾的快捷键
+"绑定大写的 HL 为行首和行尾的快捷键
 noremap H ^
 noremap L $
 
@@ -125,38 +114,19 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 nnoremap & :&&<CR>
 xnoremap & :&&<CR>
 
-" 重新绑定大小写转换功能的快捷键
-"nnoremap gu gU
-"nnoremap gl gu
-
-" 调换 a 和 A 的功能
-"nnoremap a A
-"nnoremap A a
-
-" 物理行上直接切换
-"nnoremap k gk
-"nnoremap gk k
-"nnoremap j gj
-"nnoremap gj j
-
 " 输入模式下快速的移动光标
 "inoremap <C-k> <Up>
 "inoremap <C-j> <Down>
 "inoremap <C-h> <Left>
 "inoremap <C-l> <Right>
 "inoremap <C-a> <Home>
-"inoremap <C-e> <End>
+inoremap <C-e> <End>
 
 " 命令行模式 Ctrl-j 下一条命令，Ctrl-k 上一条命令
-"cnoremap <C-j> <t_kd>
-"cnoremap <C-k> <t_ku>
-"cnoremap <C-a> <Home>
-"cnoremap <C-e> <End>
-
-" 使用方向键切换 buffer
-"noremap <C-b>n :bn<CR>
-"noremap <C-b>p :bp<CR>
-"noremap <C-b>d :bdelete<CR>
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             常用插件安装             +
@@ -201,9 +171,6 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt', {'for': ['python', 'c', 'cpp']}
 Plug 'google/vim-glaive'
 Plug 'octol/vim-cpp-enhanced-highlight'
-"Plug 'vim-jp/vim-cpp'
-
-"Plug 'Mizuchi/STL-Syntax', {'for': 'cpp'}
 
 " python
 Plug 'nvie/vim-flake8', {'for': 'python'}
@@ -226,10 +193,10 @@ Plug 'kana/vim-textobj-indent', {'for': 'python'}
 
 " other
 Plug 'tpope/vim-unimpaired'
-Plug 'Shougo/unite.vim'
-Plug 'zoncoen/unite-autojump'
 Plug 'triglav/vim-visual-increment'
-Plug 'mhinz/vim-startify'
+Plug 'KabbAmine/zeavim.vim'
+Plug '~/Workspace/ctrlp-header'
+"Plug 'zhaohuaxishi/ctrlp-header'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -251,14 +218,13 @@ source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/autoformat.vim
 source ~/.vim/pluginconfig/youcompleteme.vim
 source ~/.vim/pluginconfig/fugitive.vim
-source ~/.vim/pluginconfig/gundo.vim
 source ~/.vim/pluginconfig/ack.vim
 source ~/.vim/pluginconfig/ctrlp.vim
-source ~/.vim/pluginconfig/cscope_maps.vim
 source ~/.vim/pluginconfig/ctrlsf.vim
 source ~/.vim/pluginconfig/nerdcommenter.vim
 source ~/.vim/pluginconfig/flake8.vim
 source ~/.vim/pluginconfig/visual-star.vim
-source ~/.vim/pluginconfig/unite.vim
 source ~/.vim/pluginconfig/acsnum.vim
 source ~/.vim/pluginconfig/tmux-navigator.vim
+
+" vim:nofen:fdl=0:ts=2:sw=2:sts=2
