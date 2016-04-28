@@ -9,6 +9,7 @@ nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>f :CtrlPFunky<Cr>
 nnoremap <silent> <Leader>l :CtrlPLine<Cr>
 nnoremap <silent> <Leader>i :CtrlPHeader<CR>
+nnoremap <silent> <Leader>e :CtrlPEHeader<CR>
 
 let g:ctrlp_funky_matchtype = 'path'
 
