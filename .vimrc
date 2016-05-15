@@ -83,7 +83,7 @@ nnoremap <F10> :NERDTreeToggle<cr>
 nnoremap <F12> "=strftime("%F")<CR>gP
 inoremap <F12> <C-R>=strftime("%F")<CR>
 
-nnoremap <silent> <C-e> :<C-u>nohlsearch<CR>
+nnoremap <silent> <C-c> :<C-u>nohlsearch<CR>
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
 inoremap jk <Esc>
@@ -121,12 +121,16 @@ xnoremap & :&&<CR>
 "inoremap <C-l> <Right>
 "inoremap <C-a> <Home>
 inoremap <C-e> <End>
+inoremap <c-u> <esc>bgUwea
 
 " 命令行模式 Ctrl-j 下一条命令，Ctrl-k 上一条命令
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             常用插件安装             +

@@ -1,4 +1,4 @@
 " NERDCommenter "
 """""""""""""""""
 
-map <C-c> <Plug>NERDCommenterToggle
+"map <C-c> <Plug>NERDCommenterToggle
