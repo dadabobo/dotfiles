@@ -142,8 +142,10 @@ runtime macro/matchit.vim
 call plug#begin('~/.vim/plugged')
 
 " themes
-Plug 'flazz/vim-colorschemes'
-Plug 'altercation/vim-colors-solarized'
+"Plug 'flazz/vim-colorschemes'
+"Plug 'altercation/vim-colors-solarized'
+Plug 'sickill/vim-monokai'
+Plug 'tomasr/molokai'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
