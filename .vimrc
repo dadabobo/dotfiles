@@ -62,7 +62,7 @@ set noswapfile
 set backspace=eol,start,indent
 
 " 设置隐藏字符, 通过 set list 显示
-set listchars=tab:▸\ ,eol:¬,space:·
+set lcs=tab:>-
 
 " vim 类型文件设置折叠方式为 marker
 autocmd FileType vim set foldmethod=marker
@@ -230,5 +230,3 @@ source ~/.vim/pluginconfig/flake8.vim
 source ~/.vim/pluginconfig/visual-star.vim
 source ~/.vim/pluginconfig/acsnum.vim
 source ~/.vim/pluginconfig/tmux-navigator.vim
-
-" vim:nofen:fdl=0:ts=2:sw=2:sts=2

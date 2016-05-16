@@ -10,8 +10,9 @@ let g:airline_right_alt_sep = '<'
 
 "let g:airline_theme = "dark"
 "let g:airline_theme = "badwolf"
-"let g:airline_theme = "molokai"
+"let g:airline_theme = "monokai"
 let g:airline_theme = "tomorrow"
+"let g:airline_theme = "bubblegum"
 "let g:airline_theme = "base16"
 "let g:airline_theme = "murmur"
 "let g:airline_theme = "sol"
