@@ -83,7 +83,7 @@ nnoremap <F10> :NERDTreeToggle<cr>
 nnoremap <F12> "=strftime("%F")<CR>gP
 inoremap <F12> <C-R>=strftime("%F")<CR>
 
-nnoremap <silent> <C-c> :<C-u>nohlsearch<CR>
+nnoremap <silent> <C-m> :<C-u>nohlsearch<CR>
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
 inoremap jk <Esc>
