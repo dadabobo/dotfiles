@@ -1,13 +1,10 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="frisk"
-#ZSH_THEME="norm"
-#ZSH_THEME="evan"
 ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -52,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo autojump)
+plugins=(git sudo)
 
 # User configuration
 
@@ -65,11 +62,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -86,33 +83,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#export TERM="screen-256color"
-#eval `dircolors -b $HOME/.dircolors`
-export EDITOR=vim
+alias tmux="TERM=screen-256color tmux"
 
-setopt nonomatch
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# bind ctrl-o to clean screen since i use ctrl-l
+# for tmux panel navigation
+bindkey '^O' clear-screen
+
+# bind alt-h to delete char backward since i use
+# ctrl-h for tmux panel navigation
+bindkey '\eh' backward-delete-char
+
+# use htop instead of top
 if [ -f /usr/bin/htop ]; then
     alias top=htop
 fi
-
-export JAVA_HOME=/opt/java-8-sun
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-export PATH=${JAVA_HOME}/bin:$PATH
-
-export ANDROID_SDK=$HOME/Android/android-sdk
-export ANDROID_NDK=$HOME/Android/android-ndk
-export ANDROID_ABI=armeabi-v7a
-export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
-
-export PATH=$HOME/Android/android-studio/bin:$PATH
-
-setxkbmap -option ctrl:nocaps
-
-alias rf="source ~/.zshrc"
-alias cls="clear"
-alias gnust="/usr/bin/gst"
-
-[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
