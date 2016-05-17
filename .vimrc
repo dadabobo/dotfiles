@@ -206,8 +206,8 @@ Plug 'kana/vim-textobj-indent', {'for': 'python'}
 Plug 'tpope/vim-unimpaired'
 Plug 'triglav/vim-visual-increment'
 Plug 'KabbAmine/zeavim.vim'
-Plug '~/Workspace/ctrlp-header'
-"Plug 'zhaohuaxishi/ctrlp-header'
+"Plug '~/Workspace/ctrlp-header'
+Plug 'zhaohuaxishi/ctrlp-header'
 
 " Add plugins to &runtimepath
 call plug#end()
