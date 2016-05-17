@@ -1,4 +1,4 @@
 " vim-flake8 "
 """"""""""""""
 
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()

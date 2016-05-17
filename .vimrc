@@ -129,8 +129,11 @@ cnoremap <C-k> <Up>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
+" 修改 vimrc 的快捷方式
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             常用插件安装             +
@@ -145,7 +148,8 @@ call plug#begin('~/.vim/plugged')
 "Plug 'flazz/vim-colorschemes'
 "Plug 'altercation/vim-colors-solarized'
 Plug 'sickill/vim-monokai'
-Plug 'tomasr/molokai'
+"Plug 'tomasr/molokai'
+"Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
@@ -166,6 +170,7 @@ Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'scrooloose/syntastic'
 
 " commenter
 Plug 'scrooloose/nerdcommenter'
@@ -179,7 +184,7 @@ Plug 'google/vim-glaive'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 " python
-Plug 'nvie/vim-flake8', {'for': 'python'}
+"Plug 'nvie/vim-flake8', {'for': 'python'}
 
 " git
 Plug 'airblade/vim-gitgutter'
