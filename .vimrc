@@ -24,10 +24,10 @@ set hlsearch
 syntax on
 
 " tabs
-setlocal expandtab
-setlocal softtabstop=4
-setlocal shiftwidth=4
-setlocal tabstop=4
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
 
 " 缩进设置，设置基于文件的类型的缩进
 set autoindent
