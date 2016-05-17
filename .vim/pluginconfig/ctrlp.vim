@@ -26,10 +26,10 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
   \ -g ""'
 
 " set ctrlp header list path
-let g:ctrlp_header_path = {
-  \ 'c'   : [
-  \		'/home/guorongfei/.vim/pluginconfig/headerlist/stdc.txt',
-  \		'/home/guorongfei/.vim/pluginconfig/headerlist/extent.txt',
-  \         ],
-  \ 'cpp' : ['/home/guorongfei/.vim/pluginconfig/headerlist/stdcpp.txt'],
-  \ }
+"let g:ctrlp_header_path = {
+  "\ 'c'   : [
+  "\		'/home/guorongfei/.vim/pluginconfig/headerlist/stdc.txt',
+  "\		'/home/guorongfei/.vim/pluginconfig/headerlist/extent.txt',
+  "\         ],
+  "\ 'cpp' : ['/home/guorongfei/.vim/pluginconfig/headerlist/stdcpp.txt'],
+  "\ }
