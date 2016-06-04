@@ -166,11 +166,13 @@ Plug 'tpope/vim-repeat'
 
 " project manager
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/syntastic'
+Plug 'mileszs/ack.vim'
 
 " commenter
 Plug 'scrooloose/nerdcommenter'
@@ -205,7 +207,7 @@ Plug 'kana/vim-textobj-indent', {'for': 'python'}
 " other
 Plug 'tpope/vim-unimpaired'
 Plug 'triglav/vim-visual-increment'
-Plug 'KabbAmine/zeavim.vim'
+"Plug 'KabbAmine/zeavim.vim'
 "Plug '~/Workspace/ctrlp-header'
 Plug 'zhaohuaxishi/ctrlp-header'
 
@@ -236,4 +238,3 @@ source ~/.vim/pluginconfig/nerdcommenter.vim
 source ~/.vim/pluginconfig/flake8.vim
 source ~/.vim/pluginconfig/visual-star.vim
 source ~/.vim/pluginconfig/acsnum.vim
-source ~/.vim/pluginconfig/tmux-navigator.vim

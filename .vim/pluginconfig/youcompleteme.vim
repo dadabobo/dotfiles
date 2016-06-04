@@ -46,3 +46,7 @@ let g:ycm_filetype_blacklist = {
       \}
 
 let g:ycm_show_diagnostics_ui = 0
+
+nnoremap <leader>gt :YcmCompleter GoToDefinitionElseDeclaration<cr>
+nnoremap <leader>gg :YcmCompleter GoToDefinition<cr>
+nnoremap <leader>gd :YcmCompleter GoToDeclaration<cr>
