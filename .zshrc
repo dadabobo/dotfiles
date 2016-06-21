@@ -2,13 +2,14 @@ source $HOME/.antigen.zsh
 
 antigen use oh-my-zsh
 
-antigen theme evan
+antigen theme wedisagree
 
 antigen bundle git
 antigen bundle sudo
 antigen bundle pip
 antigen bundle autojump
 antigen bundle command-not-found
+antigen bundle tmuxinator
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
