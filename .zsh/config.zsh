@@ -6,3 +6,8 @@
 autoload -U compinit && compinit -u
 
 export EDITOR="vim"
+
+export PATH=/usr/local/gcc-6.1.0/bin:$PATH
+
+alias gcc="gcc-6.1.0"
+alias g++="g++-6.1.0"

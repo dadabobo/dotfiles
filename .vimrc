@@ -72,6 +72,7 @@ Plug 'godlygeek/tabular'
 
 " todo list
 Plug 'vitalk/vim-simple-todo', {'for': 'markdown'}
+Plug 'gonzaloserrano/vim-markdown-todo'
 "Plug 'freitass/todo.txt-vim'
 
 " text-object
