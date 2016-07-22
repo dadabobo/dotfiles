@@ -2,9 +2,10 @@
 """""""""""""""
 
 set t_Co=256
-set background=light
+"set background=light
+set background=dark
 "colorscheme molokai
 "colorscheme Tomorrow-Night-Bright
 "colorscheme monokai
-colorscheme PaperColor
+colorscheme solarized
 

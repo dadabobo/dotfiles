@@ -16,7 +16,7 @@ runtime macro/matchit.vim
 call plug#begin('~/.vim/plugged')
 
 " themes
-"Plug 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 "Plug 'altercation/vim-colors-solarized'
 Plug 'sickill/vim-monokai'
 "Plug 'tomasr/molokai'
