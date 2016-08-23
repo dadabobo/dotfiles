@@ -28,8 +28,8 @@ set cino=(0,W4
 filetype plugin indent on
 
 " 改变超过 80 个字符之后的区域，这样就可以起到提示作用
-set colorcolumn=80
-set textwidth=79
+set colorcolumn=81
+set textwidth=80
 set fo+=mB
 set wrap
 
@@ -64,19 +64,17 @@ autocmd FileType vim set foldmethod=marker
 " +             快捷键配置               +
 " ++++++++++++++++++++++++++++++++++++++++
 
-nnoremap <F1> :FormatCode<cr>
-nnoremap <F2> :set number!<cr>
-nnoremap <F3> :set paste!<cr>
-nnoremap <F4> :set hlsearch!<cr>
+"nnoremap <F1> :FormatCode<cr>
+"nnoremap <F2> :set number!<cr>
+"nnoremap <F3> :set paste!<cr>
+"nnoremap <F4> :set hlsearch!<cr>
 
-nnoremap <F9> :TagbarToggle<cr>
-nnoremap <F10> :NERDTreeToggle<cr>
+"nnoremap <F9> :TagbarToggle<cr>
+"nnoremap <F10> :NERDTreeToggle<cr>
 
 " insert current time
-nnoremap <F12> "=strftime("%F")<CR>gP
-inoremap <F12> <C-R>=strftime("%F")<CR>
-
-nnoremap <silent> <C-m> :<C-u>nohlsearch<CR>
+"nnoremap <F12> "=strftime("%F")<CR>gP
+"inoremap <F12> <C-R>=strftime("%F")<CR>
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
 "inoremap jk <Esc>
@@ -103,8 +101,8 @@ cmap w!! w !sudo tee >/dev/null %
 " 修改leader键
 let mapleader = ';'
 let maplocalleader = ','
-noremap - ;
-noremap \ ,
+noremap = ;
+noremap - ,
 
 " 使用 %% 扩展当前文件的路径
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'

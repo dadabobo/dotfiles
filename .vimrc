@@ -16,14 +16,7 @@ runtime macro/matchit.vim
 call plug#begin('~/.vim/plugged')
 
 " themes
-Plug 'flazz/vim-colorschemes'
-"Plug 'altercation/vim-colors-solarized'
 Plug 'sickill/vim-monokai'
-"Plug 'tomasr/molokai'
-"Plug 'jdkanani/vim-material-theme'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'vim-scripts/oceandeep'
-"Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
@@ -45,8 +38,8 @@ Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'scrooloose/syntastic', {'for': ['python']}
 Plug 'mileszs/ack.vim'
+Plug 'brookhong/cscope.vim'
 
 " commenter
 Plug 'scrooloose/nerdcommenter'
@@ -61,7 +54,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-misc' | Plug 'xolox/vim-easytags', {'for': ['cpp', 'c']}
 
 " python
-"Plug 'nvie/vim-flake8', {'for': 'python'}
+Plug 'nvie/vim-flake8', {'for': 'python'}
 
 " git
 Plug 'airblade/vim-gitgutter'
@@ -70,10 +63,12 @@ Plug 'tpope/vim-fugitive'
 " for indent
 Plug 'godlygeek/tabular'
 
+" for markdown
+"Plug 'plasticboy/vim-markdown'
+
 " todo list
 Plug 'vitalk/vim-simple-todo', {'for': 'markdown'}
-Plug 'gonzaloserrano/vim-markdown-todo'
-"Plug 'freitass/todo.txt-vim'
+Plug 'gonzaloserrano/vim-markdown-todo', {'for': 'markdown'}
 
 " text-object
 Plug 'kana/vim-textobj-user' | Plug 'kana/vim-textobj-entire'
@@ -88,6 +83,7 @@ Plug 'triglav/vim-visual-increment'
 "Plug 'KabbAmine/zeavim.vim'
 "Plug '~/Workspace/ctrlp-header'
 Plug 'zhaohuaxishi/ctrlp-header'
+Plug 'tpope/vim-eunuch'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -100,19 +96,22 @@ call plug#end()
 " +		         插件配置               +
 " +++++++++++++++++++++++++++++++++++++++
 
-source ~/.vim/pluginconfig/colorscheme.vim
-source ~/.vim/pluginconfig/airline.vim
-source ~/.vim/pluginconfig/tmuxline.vim
-source ~/.vim/pluginconfig/nerdtree.vim
-source ~/.vim/pluginconfig/doxygentoolkit.vim
-source ~/.vim/pluginconfig/ultisnips.vim
-source ~/.vim/pluginconfig/autoformat.vim
-source ~/.vim/pluginconfig/youcompleteme.vim
-source ~/.vim/pluginconfig/fugitive.vim
 source ~/.vim/pluginconfig/ack.vim
+source ~/.vim/pluginconfig/acsnum.vim
+source ~/.vim/pluginconfig/airline.vim
+source ~/.vim/pluginconfig/autoformat.vim
+source ~/.vim/pluginconfig/codefmt.vim
+source ~/.vim/pluginconfig/colorscheme.vim
+source ~/.vim/pluginconfig/cscope.vim
 source ~/.vim/pluginconfig/ctrlp.vim
 source ~/.vim/pluginconfig/ctrlsf.vim
-source ~/.vim/pluginconfig/nerdcommenter.vim
+source ~/.vim/pluginconfig/doxygentoolkit.vim
 source ~/.vim/pluginconfig/flake8.vim
+source ~/.vim/pluginconfig/fugitive.vim
+source ~/.vim/pluginconfig/nerdcommenter.vim
+source ~/.vim/pluginconfig/nerdtree.vim
+source ~/.vim/pluginconfig/tagbar.vim
+source ~/.vim/pluginconfig/tmuxline.vim
+source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/visual-star.vim
-source ~/.vim/pluginconfig/acsnum.vim
+source ~/.vim/pluginconfig/youcompleteme.vim
