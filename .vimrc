@@ -16,20 +16,24 @@ runtime macro/matchit.vim
 call plug#begin('~/.vim/plugged')
 
 " themes
-Plug 'sickill/vim-monokai'
+"Plug 'sickill/vim-monokai'
+Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
 Plug 'edkolev/tmuxline.vim'
+"Plug 'Yggdroot/indentLine'
 
 " auto complete
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Valloric/YouCompleteMe'
+Plug 'mattn/emmet-vim'
 
 " parenthes
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'alvan/vim-closetag'
 
 " project manager
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
@@ -39,19 +43,16 @@ Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mileszs/ack.vim'
-Plug 'brookhong/cscope.vim'
 
 " commenter
 Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'DoxygenToolkit.vim'
 
 " cpp dev
 Plug 'derekwyatt/vim-fswitch', {'for': ['cpp', 'c']} | Plug 'derekwyatt/vim-protodef'
-Plug 'google/vim-maktaba'
-Plug 'google/vim-codefmt', {'for': ['python', 'c', 'cpp']}
-Plug 'google/vim-glaive'
+Plug 'Chiel92/vim-autoformat'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'vim-misc' | Plug 'xolox/vim-easytags', {'for': ['cpp', 'c']}
 
 " python
 Plug 'nvie/vim-flake8', {'for': 'python'}
@@ -64,11 +65,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'godlygeek/tabular'
 
 " for markdown
-"Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown'
 
 " todo list
 Plug 'vitalk/vim-simple-todo', {'for': 'markdown'}
-Plug 'gonzaloserrano/vim-markdown-todo', {'for': 'markdown'}
 
 " text-object
 Plug 'kana/vim-textobj-user' | Plug 'kana/vim-textobj-entire'
@@ -79,11 +79,14 @@ Plug 'kana/vim-textobj-function'
 
 " other
 Plug 'tpope/vim-unimpaired'
-Plug 'triglav/vim-visual-increment'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-dispatch'
 "Plug 'KabbAmine/zeavim.vim'
 "Plug '~/Workspace/ctrlp-header'
+Plug '~/Workspace/vim-ctrlp-cmdpalette'
 Plug 'zhaohuaxishi/ctrlp-header'
-Plug 'tpope/vim-eunuch'
+"Plug 'zhaohuaxishi/vim-ctrlp-cmdpalette'
+Plug 'mhinz/vim-startify'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -93,14 +96,13 @@ call plug#end()
 
 
 " +++++++++++++++++++++++++++++++++++++++
-" +		         插件配置               +
+" +              插件配置               +
 " +++++++++++++++++++++++++++++++++++++++
 
 source ~/.vim/pluginconfig/ack.vim
 source ~/.vim/pluginconfig/acsnum.vim
 source ~/.vim/pluginconfig/airline.vim
 source ~/.vim/pluginconfig/autoformat.vim
-source ~/.vim/pluginconfig/codefmt.vim
 source ~/.vim/pluginconfig/colorscheme.vim
 source ~/.vim/pluginconfig/cscope.vim
 source ~/.vim/pluginconfig/ctrlp.vim

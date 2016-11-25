@@ -13,6 +13,9 @@ set ignorecase
 set incsearch
 set hlsearch
 
+" Ctrl-Space 需要这个选项
+set hidden
+
 " 默认开启语法高亮
 syntax on
 
@@ -92,8 +95,8 @@ nnoremap ' `
 nnoremap ` '
 
 " 使用更合理的大小写切换
-nnoremap gu gU
-nnoremap gl gu
+"nnoremap gu gU
+"nnoremap gl gu
 
 " 使用超级用户权限编辑这个文件
 cmap w!! w !sudo tee >/dev/null %
@@ -101,7 +104,7 @@ cmap w!! w !sudo tee >/dev/null %
 " 修改leader键
 let mapleader = ';'
 let maplocalleader = ','
-noremap = ;
+noremap + ;
 noremap - ,
 
 " 使用 %% 扩展当前文件的路径
@@ -129,5 +132,6 @@ cnoremap <C-e> <End>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+nnoremap <C-p> "+gP
+
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
