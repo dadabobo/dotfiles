@@ -20,3 +20,5 @@ export PATH=$NDK_ROOT:$TOOLCHAIN_PATH/bin:$PATH
 export LD_LIBRARY_PATH=/Users/guorongfei/Workspace/libclink_android/lib
 
 export PATH=/Users/guorongfei/Library/Android/sdk/platform-tools:$PATH
+
+setxkbmap -layout us -option ctrl:nocaps
