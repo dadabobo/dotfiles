@@ -1,0 +1,31 @@
+priority 1
+
+global !p
+import snippet_helpers as helpers
+endglobal
+
+snippet once "Include header once only guard"
+#ifndef ${1:`!p
+if not snip.c:
+	prefix = helpers.get_project_root()
+	if prefix:
+		prefix = prefix.decode('utf-8').rstrip()
+		path = helpers.get_pwd().decode('utf-8').rstrip()
+		path = path[len(prefix) + 1:]
+
+		tokens = [path, snip.fn]
+		tokens = [helpers.replace_nonalphnum(token, '_') for token in tokens]
+
+		snip.rv = '_'.join(tokens).upper() + '_'
+	else:
+		name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+		rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
+		snip.rv = ('%s_%s' % (name,rand)).upper()
+else:
+	snip.rv = snip.c`}
+#define $1
+
+${VISUAL}${0}
+
+#endif /* end of include guard: $1 */
+endsnippet
