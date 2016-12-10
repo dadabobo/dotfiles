@@ -1,6 +1,6 @@
 priority 1
 
-snippet inc
+snippet inc "include head"
 #include <${1:iostream}>${0}
 endsnippet
 
@@ -8,4 +8,21 @@ snippet foff "turn off the clang format"
 // clang-format off
 ${VISUAL}
 // clang-format on
+endsnippet
+
+snippet cl "class .. (class)"
+class ${1:`!p
+basename =  snip.basename or "name"
+
+tokens = basename.split('_')
+tokens = [token.title() for token in tokens]
+
+snip.rv = "".join(tokens)
+`} {
+public:
+	${1/(\w+).*/$1/}(${2:arguments});
+
+private:
+	${0:/* data */}
+};
 endsnippet

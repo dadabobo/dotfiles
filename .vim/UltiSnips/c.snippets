@@ -13,7 +13,10 @@ if not snip.c:
 		path = helpers.get_pwd().decode('utf-8').rstrip()
 		path = path[len(prefix) + 1:]
 
-		tokens = [path, snip.fn]
+		tokens = [snip.fn]
+		if path:
+			tokens = [path] + tokens
+
 		tokens = [helpers.replace_nonalphnum(token, '_') for token in tokens]
 
 		snip.rv = '_'.join(tokens).upper() + '_'
