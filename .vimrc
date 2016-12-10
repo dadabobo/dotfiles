@@ -27,6 +27,7 @@ Plug 'edkolev/tmuxline.vim'
 " auto complete
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Valloric/YouCompleteMe'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'mattn/emmet-vim'
 
 " parenthes
@@ -37,7 +38,6 @@ Plug 'alvan/vim-closetag'
 
 " project manager
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 Plug 'dyng/ctrlsf.vim'
@@ -46,7 +46,7 @@ Plug 'mileszs/ack.vim'
 
 " commenter
 Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-commentary'
 Plug 'DoxygenToolkit.vim'
 
 " cpp dev
@@ -81,19 +81,21 @@ Plug 'kana/vim-textobj-function'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-dispatch'
-"Plug 'KabbAmine/zeavim.vim'
-"Plug '~/Workspace/ctrlp-header'
-Plug '~/Workspace/vim-ctrlp-cmdpalette'
+Plug 'tpope/vim-endwise'
 Plug 'zhaohuaxishi/ctrlp-header'
-"Plug 'zhaohuaxishi/vim-ctrlp-cmdpalette'
+Plug 'zhaohuaxishi/vim-ctrlp-cmdpalette'
 Plug 'mhinz/vim-startify'
+
+Plug 'easymotion/vim-easymotion'
+Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch-easymotion.vim'
+Plug 'haya14busa/incsearch-fuzzy.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
 
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
 
 " +++++++++++++++++++++++++++++++++++++++
 " +              插件配置               +
@@ -104,7 +106,6 @@ source ~/.vim/pluginconfig/acsnum.vim
 source ~/.vim/pluginconfig/airline.vim
 source ~/.vim/pluginconfig/autoformat.vim
 source ~/.vim/pluginconfig/colorscheme.vim
-source ~/.vim/pluginconfig/cscope.vim
 source ~/.vim/pluginconfig/ctrlp.vim
 source ~/.vim/pluginconfig/ctrlsf.vim
 source ~/.vim/pluginconfig/doxygentoolkit.vim
@@ -117,3 +118,4 @@ source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/visual-star.vim
 source ~/.vim/pluginconfig/youcompleteme.vim
+source ~/.vim/pluginconfig/easymotion.vim

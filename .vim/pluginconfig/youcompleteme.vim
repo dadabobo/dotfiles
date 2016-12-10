@@ -8,9 +8,6 @@ set completeopt=longest,menu
 "离开插入模式后自动关闭预览窗口
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-" 回车选中当前项
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-
 " 不显示开启vim时检查ycm_extra_conf文件的信息
 let g:ycm_confirm_extra_conf=0
 
@@ -41,12 +38,13 @@ let g:ycm_key_list_previous_completion = ['C-k']
 
 " 设置在下面几种格式的文件上屏蔽ycm
 let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'nerdtree' : 1,
-      \}
-
-let g:ycm_show_diagnostics_ui = 0
+            \ 'tagbar' : 1,
+            \ 'nerdtree' : 1,
+            \}
 
 nnoremap <leader>gt :YcmCompleter GoToDefinitionElseDeclaration<cr>
 nnoremap <leader>gg :YcmCompleter GoToDefinition<cr>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<cr>
+
+let g:ycm_error_symbol = "➠"
+let g:ycm_warning_symbol = "⚠"

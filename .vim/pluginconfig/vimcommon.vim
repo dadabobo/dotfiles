@@ -120,7 +120,7 @@ xnoremap & :&&<CR>
 "inoremap <C-h> <Left>
 "inoremap <C-l> <Right>
 "inoremap <C-a> <Home>
-inoremap <C-e> <End>
+"inoremap <C-e> <End>
 
 " 命令行模式 Ctrl-j 下一条命令，Ctrl-k 上一条命令
 cnoremap <C-j> <Down>
@@ -134,4 +134,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 nnoremap <C-p> "+gP
 
-autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+if has("autocmd")
+    autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+endif
