@@ -58,7 +58,7 @@ set noswapfile
 set backspace=eol,start,indent
 
 " 设置隐藏字符, 通过 set list 显示
-set lcs=tab:>-
+set listchars=tab:▸\ ,eol:¬
 
 " vim 类型文件设置折叠方式为 marker
 autocmd FileType vim set foldmethod=marker
@@ -80,8 +80,8 @@ autocmd FileType vim set foldmethod=marker
 "inoremap <F12> <C-R>=strftime("%F")<CR>
 
 " 绑定 jk <Esc>，这样就不用按角落里面的 <Esc>
-"inoremap jk <Esc>
-inoremap <C-l> <Esc>
+inoremap jk <Esc>
+"inoremap <C-l> <Esc>
 
 " 绑定 space 到 : 按键
 noremap <space> :

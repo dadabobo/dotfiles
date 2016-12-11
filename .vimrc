@@ -21,8 +21,11 @@ Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
+
+" tmux integration
 Plug 'edkolev/tmuxline.vim'
-"Plug 'Yggdroot/indentLine'
+Plug 'wellle/tmux-complete.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
 " auto complete
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -43,6 +46,7 @@ Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mileszs/ack.vim'
+Plug 'xolox/vim-misc' | Plug 'xolox/vim-easytags'
 
 " commenter
 Plug 'scrooloose/nerdcommenter'
@@ -90,11 +94,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'haya14busa/incsearch-fuzzy.vim'
+Plug 'justinmk/vim-gtfo'
 
 " Add plugins to &runtimepath
 call plug#end()
 
-" see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
 " +++++++++++++++++++++++++++++++++++++++
@@ -119,3 +123,4 @@ source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/visual-star.vim
 source ~/.vim/pluginconfig/youcompleteme.vim
 source ~/.vim/pluginconfig/easymotion.vim
+source ~/.vim/pluginconfig/vim-easytags.vim

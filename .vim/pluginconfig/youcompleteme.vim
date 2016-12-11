@@ -48,3 +48,5 @@ nnoremap <leader>gd :YcmCompleter GoToDeclaration<cr>
 
 let g:ycm_error_symbol = "➠"
 let g:ycm_warning_symbol = "⚠"
+
+let g:tmuxcomplete#trigger = 'omnifunc'
