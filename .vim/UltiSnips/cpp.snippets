@@ -26,3 +26,16 @@ private:
 	${0:/* data */}
 };
 endsnippet
+
+snippet try "try ... catch"
+try {
+	${0:${VISUAL}}
+} catch (${1:std::exception& exc}) {
+	${2:// TODO}
+}
+endsnippet
+
+snippet ns "namespace"
+namespace ${1}{
+}  // namespace $1
+endsnippet

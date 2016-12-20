@@ -16,7 +16,7 @@ runtime macro/matchit.vim
 call plug#begin('~/.vim/plugged')
 
 " themes
-"Plug 'sickill/vim-monokai'
+Plug 'altercation/vim-colors-solarized'
 Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
@@ -37,7 +37,6 @@ Plug 'mattn/emmet-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'alvan/vim-closetag'
 
 " project manager
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
@@ -50,13 +49,13 @@ Plug 'xolox/vim-misc' | Plug 'xolox/vim-easytags'
 
 " commenter
 Plug 'scrooloose/nerdcommenter'
-"Plug 'tpope/vim-commentary'
 Plug 'DoxygenToolkit.vim'
 
 " cpp dev
 Plug 'derekwyatt/vim-fswitch', {'for': ['cpp', 'c']} | Plug 'derekwyatt/vim-protodef'
 Plug 'Chiel92/vim-autoformat'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'rsaraf/vim-advanced-lint'
 
 " python
 Plug 'nvie/vim-flake8', {'for': 'python'}
@@ -72,7 +71,8 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " todo list
-Plug 'vitalk/vim-simple-todo', {'for': 'markdown'}
+"Plug 'vitalk/vim-simple-todo', {'for': 'markdown'}
+Plug 'freitass/todo.txt-vim'
 
 " text-object
 Plug 'kana/vim-textobj-user' | Plug 'kana/vim-textobj-entire'
@@ -89,12 +89,13 @@ Plug 'tpope/vim-endwise'
 Plug 'zhaohuaxishi/ctrlp-header'
 Plug 'zhaohuaxishi/vim-ctrlp-cmdpalette'
 Plug 'mhinz/vim-startify'
-
 Plug 'easymotion/vim-easymotion'
-Plug 'haya14busa/incsearch.vim'
-Plug 'haya14busa/incsearch-easymotion.vim'
-Plug 'haya14busa/incsearch-fuzzy.vim'
-Plug 'justinmk/vim-gtfo'
+Plug 'vim-scripts/tpp.vim'
+"Plug 'haya14busa/incsearch.vim'
+"Plug 'haya14busa/incsearch-easymotion.vim'
+"Plug 'haya14busa/incsearch-fuzzy.vim'
+"Plug 'justinmk/vim-gtfo'
+"Plug 'xolox/vim-notes'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -124,3 +125,5 @@ source ~/.vim/pluginconfig/visual-star.vim
 source ~/.vim/pluginconfig/youcompleteme.vim
 source ~/.vim/pluginconfig/easymotion.vim
 source ~/.vim/pluginconfig/vim-easytags.vim
+source ~/.vim/pluginconfig/vim-note.vim
+source ~/.vim/pluginconfig/cpplint.vim

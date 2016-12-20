@@ -136,4 +136,9 @@ nnoremap <C-p> "+gP
 
 if has("autocmd")
     autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+    autocmd BufEnter * silent! lcd %:p:h
+
+    autocmd FileType c,cpp let b:autoformat_autoindent=0
+    autocmd BufNewFile *.cpp,*.c,*.h,*.hpp 0r ~/.vim/pluginconfig/license.txt
+    autocmd FileType cpp map <buffer> <F3> :call Cpplint()<CR>
 endif

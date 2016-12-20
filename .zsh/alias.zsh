@@ -1,4 +1,4 @@
-alias tmux="TERM=screen-256color tmux"
+alias tmux="tmux -2"
 
 #alias vim="mvim -v"
 #alias vi="vim"
