@@ -12,7 +12,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 let g:ycm_confirm_extra_conf=0
 
 " 开启基于tag的补全，可以在这之后添加需要的标签路径
-let g:ycm_collect_identifiers_from_tags_files=1
+let g:ycm_collect_identifiers_from_tags_files=0
 
 "注释和字符串中的文字也会被收入补全
 let g:ycm_collect_identifiers_from_comments_and_strings = 0

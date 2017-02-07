@@ -132,11 +132,21 @@ cnoremap <C-e> <End>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-nnoremap <C-p> "+gP
+nnoremap <C-p> "+gp
+
+"function s:ToggleAutoChdir()
+    "let cwd = getcwd()
+    "if stridx(cwd, "build") == -1
+        "echo "autochdir"
+        "execute 'set autochdir'
+    "endif
+"endfunction
+
+nnoremap coa :set autochdir!<CR> :set autochdir?<CR>
 
 if has("autocmd")
-    autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-    autocmd BufEnter * silent! lcd %:p:h
+    "autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+    "autocmd BufEnter * silent! call s:ToggleAutoChdir()
 
     autocmd FileType c,cpp let b:autoformat_autoindent=0
     autocmd BufNewFile *.cpp,*.c,*.h,*.hpp 0r ~/.vim/pluginconfig/license.txt

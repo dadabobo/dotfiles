@@ -45,7 +45,8 @@ Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mileszs/ack.vim'
-Plug 'xolox/vim-misc' | Plug 'xolox/vim-easytags'
+"Plug 'xolox/vim-misc' | Plug 'xolox/vim-easytags'
+Plug 'craigemery/vim-autotag'
 
 " commenter
 Plug 'scrooloose/nerdcommenter'
@@ -89,8 +90,8 @@ Plug 'tpope/vim-endwise'
 Plug 'zhaohuaxishi/ctrlp-header'
 Plug 'zhaohuaxishi/vim-ctrlp-cmdpalette'
 Plug 'mhinz/vim-startify'
-Plug 'easymotion/vim-easymotion'
 Plug 'vim-scripts/tpp.vim'
+"Plug 'easymotion/vim-easymotion'
 "Plug 'haya14busa/incsearch.vim'
 "Plug 'haya14busa/incsearch-easymotion.vim'
 "Plug 'haya14busa/incsearch-fuzzy.vim'
@@ -123,7 +124,9 @@ source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/visual-star.vim
 source ~/.vim/pluginconfig/youcompleteme.vim
-source ~/.vim/pluginconfig/easymotion.vim
-source ~/.vim/pluginconfig/vim-easytags.vim
+"source ~/.vim/pluginconfig/easymotion.vim
+"source ~/.vim/pluginconfig/vim-easytags.vim
+source ~/.vim/pluginconfig/vim-autotag.vim
 source ~/.vim/pluginconfig/vim-note.vim
 source ~/.vim/pluginconfig/cpplint.vim
+source ~/.vim/pluginconfig/fswitch.vim
