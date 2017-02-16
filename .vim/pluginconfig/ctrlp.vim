@@ -14,7 +14,7 @@ nnoremap <silent> <Leader><Leader> :CtrlPCmdPalette<CR>
 
 let g:ctrlp_funky_matchtype = 'path'
 
-let g:ctrlp_extensions = ['line', 'header']
+let g:ctrlp_extensions = ['line', 'tag']
 
 " use ag to list file
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'

@@ -21,6 +21,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
+Plug 'kien/rainbow_parentheses.vim'
 
 " tmux integration
 Plug 'edkolev/tmuxline.vim'
@@ -130,3 +131,4 @@ source ~/.vim/pluginconfig/vim-autotag.vim
 source ~/.vim/pluginconfig/vim-note.vim
 source ~/.vim/pluginconfig/cpplint.vim
 source ~/.vim/pluginconfig/fswitch.vim
+source ~/.vim/pluginconfig/rainbow-parentheses.vim
