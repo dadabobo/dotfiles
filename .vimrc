@@ -21,7 +21,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
-Plug 'kien/rainbow_parentheses.vim'
 
 " tmux integration
 Plug 'edkolev/tmuxline.vim'
@@ -48,6 +47,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'mileszs/ack.vim'
 "Plug 'xolox/vim-misc' | Plug 'xolox/vim-easytags'
 Plug 'craigemery/vim-autotag'
+Plug 'fholgado/minibufexpl.vim'
 
 " commenter
 Plug 'scrooloose/nerdcommenter'
@@ -73,7 +73,6 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " todo list
-"Plug 'vitalk/vim-simple-todo', {'for': 'markdown'}
 Plug 'freitass/todo.txt-vim'
 
 " text-object
@@ -82,6 +81,7 @@ Plug 'lucapette/vim-textobj-underscore', {'for': ['python', 'cpp', 'c']}
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-indent', {'for': 'python'}
 Plug 'kana/vim-textobj-function'
+Plug 'terryma/vim-expand-region'
 
 " other
 Plug 'tpope/vim-unimpaired'
@@ -92,12 +92,6 @@ Plug 'zhaohuaxishi/ctrlp-header'
 Plug 'zhaohuaxishi/vim-ctrlp-cmdpalette'
 Plug 'mhinz/vim-startify'
 Plug 'vim-scripts/tpp.vim'
-"Plug 'easymotion/vim-easymotion'
-"Plug 'haya14busa/incsearch.vim'
-"Plug 'haya14busa/incsearch-easymotion.vim'
-"Plug 'haya14busa/incsearch-fuzzy.vim'
-"Plug 'justinmk/vim-gtfo'
-"Plug 'xolox/vim-notes'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -125,10 +119,7 @@ source ~/.vim/pluginconfig/tmuxline.vim
 source ~/.vim/pluginconfig/ultisnips.vim
 source ~/.vim/pluginconfig/visual-star.vim
 source ~/.vim/pluginconfig/youcompleteme.vim
-"source ~/.vim/pluginconfig/easymotion.vim
-"source ~/.vim/pluginconfig/vim-easytags.vim
 source ~/.vim/pluginconfig/vim-autotag.vim
 source ~/.vim/pluginconfig/vim-note.vim
 source ~/.vim/pluginconfig/cpplint.vim
 source ~/.vim/pluginconfig/fswitch.vim
-source ~/.vim/pluginconfig/rainbow-parentheses.vim
