@@ -90,6 +90,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'zhaohuaxishi/ctrlp-header'
 Plug 'zhaohuaxishi/vim-ctrlp-cmdpalette'
+Plug 'zhaohuaxishi/auto-header'
 Plug 'mhinz/vim-startify'
 Plug 'vim-scripts/tpp.vim'
 
