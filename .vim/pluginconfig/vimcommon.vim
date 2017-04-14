@@ -60,6 +60,8 @@ set backspace=eol,start,indent
 " 设置隐藏字符, 通过 set list 显示
 set listchars=tab:▸\ ,eol:¬
 
+set tags=./tags;/
+
 " vim 类型文件设置折叠方式为 marker
 autocmd FileType vim set foldmethod=marker
 
@@ -134,6 +136,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 nnoremap <C-p> "+gp
 
+imap <C-c> <Esc>
+
 "function s:ToggleAutoChdir()
     "let cwd = getcwd()
     "if stridx(cwd, "build") == -1
@@ -151,4 +155,6 @@ if has("autocmd")
     autocmd FileType c,cpp let b:autoformat_autoindent=0
     autocmd BufNewFile *.cpp,*.c,*.h,*.hpp 0r ~/.vim/pluginconfig/license.txt
     autocmd FileType cpp map <buffer> <F3> :call Cpplint()<CR>
+
+    autocmd BufRead,BufNewFile Makefile.inc set filetype=automake
 endif

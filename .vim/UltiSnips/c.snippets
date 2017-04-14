@@ -1,6 +1,7 @@
 priority 1
 
 global !p
+import vim
 import snippet_helpers as helpers
 endglobal
 
@@ -10,13 +11,10 @@ if not snip.c:
 	prefix = helpers.get_project_root()
 	if prefix:
 		prefix = prefix.decode('utf-8').rstrip()
-		path = helpers.get_pwd().decode('utf-8').rstrip()
+		path = vim.current.buffer.name
 		path = path[len(prefix) + 1:]
 
-		tokens = [snip.fn]
-		if path:
-			tokens = [path] + tokens
-
+		tokens = [path]
 		tokens = [helpers.replace_nonalphnum(token, '_') for token in tokens]
 
 		snip.rv = '_'.join(tokens).upper() + '_'

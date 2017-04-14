@@ -38,3 +38,8 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:20'
   "\ }
 
 let g:ctrlp_cmdpalette_execute = 1
+
+let g:ctrlp_tjump_only_silent = 1
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
+let g:ctrlp_tjump_skip_tag_name = 1

@@ -6,4 +6,4 @@
 "autocmd BufWrite *.cpp :Autoformat
 "autocmd BufWrite *.c :Autoformat
 "autocmd BufWrite *.h :Autoformat
-nnoremap <C-L> :Autoformat<CR>
+"nnoremap <C-L> :Autoformat<CR>
