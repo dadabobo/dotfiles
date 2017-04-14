@@ -7,6 +7,7 @@ set nocompatible
 
 " 默认不显示行号
 set number
+set relativenumber
 
 " 搜索设置
 set ignorecase
@@ -59,6 +60,8 @@ set backspace=eol,start,indent
 
 " 设置隐藏字符, 通过 set list 显示
 set listchars=tab:▸\ ,eol:¬
+
+set tags=./tags;/
 
 " vim 类型文件设置折叠方式为 marker
 autocmd FileType vim set foldmethod=marker
@@ -133,6 +136,8 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 nnoremap <C-p> "+gp
+
+imap <C-c> <Esc>
 
 "function s:ToggleAutoChdir()
     "let cwd = getcwd()

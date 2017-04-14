@@ -10,6 +10,7 @@ antigen theme minimal
 #antigen theme arrow
 
 antigen bundle git
+antigen bundle vi-mode
 antigen bundle sudo
 antigen bundle pip
 antigen bundle autojump
