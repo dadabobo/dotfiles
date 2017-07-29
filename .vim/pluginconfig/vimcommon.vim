@@ -157,4 +157,8 @@ if has("autocmd")
     autocmd FileType cpp map <buffer> <F3> :call Cpplint()<CR>
 
     autocmd BufRead,BufNewFile Makefile.inc set filetype=automake
+
+    " In the quickfix window, <CR> is used to jump to the error under the
+    " cursor, so undefine the mapping there.
+    autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 endif

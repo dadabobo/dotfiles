@@ -59,9 +59,6 @@ Plug 'szw/vim-tags'
 Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'rhysd/vim-clang-format'
 Plug 'rhysd/clever-f.vim'
-Plug 'rhysd/committia.vim'
-Plug 'libclang-vim/libclang-vim'
-Plug 'libclang-vim/clang-type-inspector.vim'
 
 " python
 Plug 'nvie/vim-flake8', {'for': 'python'}
