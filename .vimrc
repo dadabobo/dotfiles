@@ -31,7 +31,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-Plug 'mattn/emmet-vim'
 
 " parenthes
 Plug 'Raimondi/delimitMate'

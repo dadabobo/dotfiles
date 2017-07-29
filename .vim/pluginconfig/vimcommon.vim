@@ -7,6 +7,7 @@ set nocompatible
 
 " 默认不显示行号
 set number
+set relativenumber
 
 " 搜索设置
 set ignorecase
