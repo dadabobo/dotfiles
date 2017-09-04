@@ -2,7 +2,10 @@
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
-export EDITOR="vim"
+alias vim='nvim'
+alias vi='nvim'
+
+export EDITOR="nvim"
 
 export NDK_ROOT=$HOME/Android/android-ndk-r13b
 export ANDROID_NDK_HOME=$HOME/Android/android-ndk-r13b
@@ -19,7 +22,7 @@ export ANDROID_HOME=$HOME/Android/Sdk
 
 #eval `dircolors ~/.dircolors`
 
-export TERM=screen-256color
+export TERM=xterm-256color
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240'
 

@@ -24,8 +24,7 @@ antigen bundle zsh-users/zsh-completions src
 antigen bundle uvaes/fzf-marks
 antigen-bundle Tarrasch/zsh-bd
 
-antigen apply
-
-source $HOME/.zsh/alias.zsh
 source $HOME/.zsh/bindkey.zsh
 source $HOME/.zsh/config.zsh
+
+antigen apply

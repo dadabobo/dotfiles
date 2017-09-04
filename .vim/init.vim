@@ -1,0 +1,1 @@
+/home/guorongfei/.dotfiles/.vimrc

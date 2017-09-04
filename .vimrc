@@ -4,7 +4,7 @@
 " +         last update: 2016-03-20      +
 " ++++++++++++++++++++++++++++++++++++++++
 
-source ~/.vim/pluginconfig/vimcommon.vim
+source ~/.config/nvim/pluginconfig/vimcommon.vim
 
 " ++++++++++++++++++++++++++++++++++++++++
 " +             常用插件安装             +
@@ -109,24 +109,24 @@ call plug#end()
 " +              插件配置               +
 " +++++++++++++++++++++++++++++++++++++++
 
-source ~/.vim/pluginconfig/ack.vim
-source ~/.vim/pluginconfig/airline.vim
-source ~/.vim/pluginconfig/colorscheme.vim
-source ~/.vim/pluginconfig/ctrlp.vim
-source ~/.vim/pluginconfig/ctrlsf.vim
-source ~/.vim/pluginconfig/doxygentoolkit.vim
-source ~/.vim/pluginconfig/flake8.vim
-source ~/.vim/pluginconfig/fugitive.vim
-source ~/.vim/pluginconfig/nerdtree.vim
-source ~/.vim/pluginconfig/tagbar.vim
-source ~/.vim/pluginconfig/tmuxline.vim
-source ~/.vim/pluginconfig/ultisnips.vim
-source ~/.vim/pluginconfig/visual-star.vim
-source ~/.vim/pluginconfig/youcompleteme.vim
-source ~/.vim/pluginconfig/cpplint.vim
-source ~/.vim/pluginconfig/fswitch.vim
-source ~/.vim/pluginconfig/easymotion.vim
-source ~/.vim/pluginconfig/vim-tags.vim
-source ~/.vim/pluginconfig/startify.vim
-source ~/.vim/pluginconfig/nerdcommenter.vim
-source ~/.vim/pluginconfig/comment_arguments.vim
+source ~/.config/nvim/pluginconfig/ack.vim
+source ~/.config/nvim/pluginconfig/airline.vim
+source ~/.config/nvim/pluginconfig/colorscheme.vim
+source ~/.config/nvim/pluginconfig/ctrlp.vim
+source ~/.config/nvim/pluginconfig/ctrlsf.vim
+source ~/.config/nvim/pluginconfig/doxygentoolkit.vim
+source ~/.config/nvim/pluginconfig/flake8.vim
+source ~/.config/nvim/pluginconfig/fugitive.vim
+source ~/.config/nvim/pluginconfig/nerdtree.vim
+source ~/.config/nvim/pluginconfig/tagbar.vim
+source ~/.config/nvim/pluginconfig/tmuxline.vim
+source ~/.config/nvim/pluginconfig/ultisnips.vim
+source ~/.config/nvim/pluginconfig/visual-star.vim
+source ~/.config/nvim/pluginconfig/youcompleteme.vim
+source ~/.config/nvim/pluginconfig/cpplint.vim
+source ~/.config/nvim/pluginconfig/fswitch.vim
+source ~/.config/nvim/pluginconfig/easymotion.vim
+source ~/.config/nvim/pluginconfig/vim-tags.vim
+source ~/.config/nvim/pluginconfig/startify.vim
+source ~/.config/nvim/pluginconfig/nerdcommenter.vim
+source ~/.config/nvim/pluginconfig/comment_arguments.vim
