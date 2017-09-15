@@ -13,6 +13,11 @@ source ~/.config/nvim/pluginconfig/vimcommon.vim
 " enable matchit
 runtime macro/matchit.vim
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent execute "!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
 " themes
@@ -39,7 +44,7 @@ Plug 'tpope/vim-repeat'
 
 " project manager
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-" Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 Plug 'dyng/ctrlsf.vim'
@@ -90,7 +95,6 @@ Plug 'tpope/vim-endwise'
 Plug 'zhaohuaxishi/ctrlp-header'
 Plug 'zhaohuaxishi/vim-ctrlp-cmdpalette'
 Plug 'zhaohuaxishi/auto-header'
-" Plug '~/Workspace/ctags-helper'
 Plug 'mhinz/vim-startify'
 Plug 'vim-scripts/tpp.vim'
 Plug 'vim-scripts/fcitx.vim'
@@ -100,14 +104,16 @@ Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/vim-slumlord'
 Plug 'aklt/plantuml-syntax'
 
+" icons
+Plug 'ryanoasis/vim-devicons'
+
+" this plugin must come after vim-devicons
+Plug 'bagrat/vim-workspace'
+
 " Add plugins to &runtimepath
 call plug#end()
 
 " Put your non-Plugin stuff after this line
-
-" +++++++++++++++++++++++++++++++++++++++
-" +              插件配置               +
-" +++++++++++++++++++++++++++++++++++++++
 
 source ~/.config/nvim/pluginconfig/ack.vim
 source ~/.config/nvim/pluginconfig/airline.vim
@@ -130,3 +136,4 @@ source ~/.config/nvim/pluginconfig/vim-tags.vim
 source ~/.config/nvim/pluginconfig/startify.vim
 source ~/.config/nvim/pluginconfig/nerdcommenter.vim
 source ~/.config/nvim/pluginconfig/comment_arguments.vim
+source ~/.config/nvim/pluginconfig/vim-workspace.vim

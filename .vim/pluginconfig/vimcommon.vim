@@ -3,7 +3,7 @@
 " ++++++++++++++++++++++++++++++++++++++++
 
 " 非兼容模式
-set nocompatible
+"set nocompatible
 
 " 默认不显示行号
 set number
@@ -117,14 +117,6 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 nnoremap & :&&<CR>
 xnoremap & :&&<CR>
 
-" 输入模式下快速的移动光标
-"inoremap <C-k> <Up>
-"inoremap <C-j> <Down>
-"inoremap <C-h> <Left>
-"inoremap <C-l> <Right>
-"inoremap <C-a> <Home>
-"inoremap <C-e> <End>
-
 " 命令行模式 Ctrl-j 下一条命令，Ctrl-k 上一条命令
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
@@ -132,29 +124,19 @@ cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
 " 修改 vimrc 的快捷方式
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
 
 nnoremap <C-p> "+gp
 
+set guifont=FuraCode\ Nerd\ Font\ Mono\ 10
+
 imap <C-c> <Esc>
-
-"function s:ToggleAutoChdir()
-    "let cwd = getcwd()
-    "if stridx(cwd, "build") == -1
-        "echo "autochdir"
-        "execute 'set autochdir'
-    "endif
-"endfunction
-
-nnoremap coa :set autochdir!<CR> :set autochdir?<CR>
 
 if has("autocmd")
     "autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
     "autocmd BufEnter * silent! call s:ToggleAutoChdir()
 
     autocmd FileType c,cpp let b:autoformat_autoindent=0
-    autocmd BufNewFile *.cpp,*.c,*.h,*.hpp 0r ~/.vim/pluginconfig/license.txt
+    autocmd BufNewFile *.cpp,*.c,*.h,*.hpp 0r ~/.config/nvim/pluginconfig/license.txt
     autocmd FileType cpp map <buffer> <F3> :call Cpplint()<CR>
 
     autocmd BufRead,BufNewFile Makefile.inc set filetype=automake

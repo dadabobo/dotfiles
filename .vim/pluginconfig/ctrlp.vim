@@ -1,12 +1,12 @@
 " CtrlP "
 """""""""
 
-let g:ctrlp_map = '<Leader>p'
+let g:ctrlp_map = '<Leader>f'
 
 "nnoremap <silent> <Leader>p :CtrlP<CR>
 nnoremap <silent> <Leader>m :CtrlPMRU<CR>
 nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
-nnoremap <silent> <Leader>f :CtrlPFunky<Cr>
+nnoremap <silent> <Leader>v :CtrlPFunky<Cr>
 nnoremap <silent> <Leader>l :CtrlPLine<Cr>
 nnoremap <silent> <Leader>i :CtrlPHeader<CR>
 nnoremap <silent> <Leader>e :CtrlPEHeader<CR>
@@ -26,7 +26,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
   \ --ignore "**/*.pyc"
   \ -g ""'
 
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:20'
+"let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:20'
 
 " set ctrlp header list path
 "let g:ctrlp_header_path = {
