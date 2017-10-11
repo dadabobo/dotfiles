@@ -2,7 +2,7 @@
 "let g:formatters_c = ['cfmter']
 "let g:formatters_cpp = ['cfmter']
 
-"noremap <Leader>af :Autoformat<CR>
+noremap <Leader>a ix<ESC>x:undojoin \| Autoformat<CR>
 "autocmd BufWrite *.cpp :Autoformat
 "autocmd BufWrite *.c :Autoformat
 "autocmd BufWrite *.h :Autoformat

@@ -1,6 +1,6 @@
 " nerdtree "
 """"""""""""
-map <Leader>n :NERDTreeToggle %<cr>
+map <Leader>n :NERDTreeToggle<cr>
 let NERDTreeIgnore=[
     \'\.pyc$', '\.pyo$', '\.obj$',
     \'\.o$', '\.so$', '\.egg$',

@@ -31,6 +31,7 @@ Plug 'kshenoy/vim-signature'
 " tmux integration
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
 
 " auto complete
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -44,7 +45,6 @@ Plug 'tpope/vim-repeat'
 
 " project manager
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 Plug 'dyng/ctrlsf.vim'
@@ -61,7 +61,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'rsaraf/vim-advanced-lint'
 Plug 'szw/vim-tags'
 Plug 'ivalkeen/vim-ctrlp-tjump'
-Plug 'rhysd/vim-clang-format'
+Plug 'Chiel92/vim-autoformat'
 Plug 'rhysd/clever-f.vim'
 
 " python
@@ -137,3 +137,4 @@ source ~/.config/nvim/pluginconfig/startify.vim
 source ~/.config/nvim/pluginconfig/nerdcommenter.vim
 source ~/.config/nvim/pluginconfig/comment_arguments.vim
 source ~/.config/nvim/pluginconfig/vim-workspace.vim
+source ~/.config/nvim/pluginconfig/autoformat.vim

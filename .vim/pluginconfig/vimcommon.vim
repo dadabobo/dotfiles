@@ -7,7 +7,6 @@
 
 " 默认不显示行号
 set number
-set relativenumber
 
 " 搜索设置
 set ignorecase
@@ -60,6 +59,9 @@ set backspace=eol,start,indent
 
 " 设置隐藏字符, 通过 set list 显示
 set listchars=tab:▸\ ,eol:¬
+
+" 自动重新加载内容
+set autoread
 
 set tags=./tags;/
 

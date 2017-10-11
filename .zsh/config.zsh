@@ -18,6 +18,12 @@ export PATH=$PATH:$TOOLCHAIN_HOME/bin
 export SDK_ROOT=/opt/android-sdk
 export PATH=$PATH:$SDK_ROOT/platform-tools:$SDK_ROOT/tools
 
+export RASPBERRY_HOME=/opt/raspberry/tools/arm-bcm2708
+#export PATH=$PATH:$RASPBERRY_HOME/arm-bcm2708-linux-gnueabi/bin
+#export PATH=$PATH:$RASPBERRY_HOME/arm-rpi-4.9.3-linux-gnueabihf/bin
+#export PATH=$PATH:$RASPBERRY_HOME/arm-bcm2708hardfp-linux-gnueabi/bin
+export PATH=$PATH:$RASPBERRY_HOME/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin
+
 export PATH=$PATH:$HOME/.local/bin
 
 #eval `dircolors ~/.dircolors`
@@ -25,3 +31,8 @@ export PATH=$PATH:$HOME/.local/bin
 export TERM=xterm-256color
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240'
+
+function chpwd() {
+    emulate -L zsh
+    ls
+}

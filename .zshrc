@@ -11,7 +11,6 @@ antigen use oh-my-zsh
 antigen theme ys
 
 antigen bundle git
-antigen bundle vi-mode
 antigen bundle sudo
 antigen bundle pip
 antigen bundle autojump
