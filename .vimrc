@@ -13,11 +13,6 @@ source ~/.config/nvim/pluginconfig/vimcommon.vim
 " enable matchit
 runtime macro/matchit.vim
 
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent execute "!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
-
 call plug#begin('~/.vim/plugged')
 
 " themes
@@ -27,6 +22,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
+Plug 'pseewald/vim-anyfold'
 
 " tmux integration
 Plug 'edkolev/tmuxline.vim'
@@ -47,6 +43,7 @@ Plug 'tpope/vim-repeat'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
+Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mileszs/ack.vim'
@@ -76,6 +73,8 @@ Plug 'godlygeek/tabular'
 
 " for markdown
 " Plug 'plasticboy/vim-markdown'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " text-object
 Plug 'kana/vim-textobj-user' | Plug 'kana/vim-textobj-entire'
@@ -108,7 +107,7 @@ Plug 'aklt/plantuml-syntax'
 Plug 'ryanoasis/vim-devicons'
 
 " this plugin must come after vim-devicons
-Plug 'bagrat/vim-workspace'
+"Plug 'bagrat/vim-workspace'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -138,3 +137,5 @@ source ~/.config/nvim/pluginconfig/nerdcommenter.vim
 source ~/.config/nvim/pluginconfig/comment_arguments.vim
 source ~/.config/nvim/pluginconfig/vim-workspace.vim
 source ~/.config/nvim/pluginconfig/autoformat.vim
+source ~/.config/nvim/pluginconfig/limelight.vim
+source ~/.config/nvim/pluginconfig/anyfold.vim

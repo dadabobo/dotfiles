@@ -20,6 +20,6 @@ let g:airline_theme = "tomorrow"
 "let g:airline_theme = "papercolor"
 
 "set showtabline=2
-let g:airline#extensions#tmuxline#enabled = 1
+"let g:airline#extensions#tmuxline#enabled = 1
 "let g:webdevicons_enable_airline_tabline = 1
 "let g:webdevicons_enable_airline_statusline = 1

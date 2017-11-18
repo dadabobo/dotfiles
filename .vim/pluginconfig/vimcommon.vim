@@ -132,6 +132,7 @@ nnoremap <C-p> "+gp
 set guifont=FuraCode\ Nerd\ Font\ Mono\ 10
 
 imap <C-c> <Esc>
+imap ;; <Esc>
 
 if has("autocmd")
     "autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown

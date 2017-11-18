@@ -1,5 +1,5 @@
 /doc
 *third_party*
-*contrib*
+/src/contrib/
 catch.hpp
 *.m4

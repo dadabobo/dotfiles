@@ -2,13 +2,13 @@ source $HOME/.zsh/antigen.zsh
 
 antigen use oh-my-zsh
 
-#antigen theme lambda
+antigen theme lambda
 #antigen theme Honukai
 #antigen theme minimal
 #antigen theme agnoster
 #antigen theme jreese
 #antigen theme arrow
-antigen theme ys
+#antigen theme ys
 
 antigen bundle git
 antigen bundle sudo

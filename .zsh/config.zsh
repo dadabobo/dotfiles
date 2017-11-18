@@ -5,6 +5,11 @@ source /usr/share/fzf/completion.zsh
 alias vim='nvim'
 alias vi='nvim'
 
+alias youtube-dl='youtube-dl --proxy socks5://127.0.0.1:1080/'
+
+alias 510='adb -s 192.168.54.1:5555'
+alias 3399='adb -s 192.168.54.1:6666'
+
 export EDITOR="nvim"
 
 export NDK_ROOT=/opt/android-ndk
@@ -19,14 +24,11 @@ export SDK_ROOT=/opt/android-sdk
 export PATH=$PATH:$SDK_ROOT/platform-tools:$SDK_ROOT/tools
 
 export RASPBERRY_HOME=/opt/raspberry/tools/arm-bcm2708
-#export PATH=$PATH:$RASPBERRY_HOME/arm-bcm2708-linux-gnueabi/bin
-#export PATH=$PATH:$RASPBERRY_HOME/arm-rpi-4.9.3-linux-gnueabihf/bin
-#export PATH=$PATH:$RASPBERRY_HOME/arm-bcm2708hardfp-linux-gnueabi/bin
 export PATH=$PATH:$RASPBERRY_HOME/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin
 
 export PATH=$PATH:$HOME/.local/bin
 
-#eval `dircolors ~/.dircolors`
+eval `dircolors ~/.dircolors`
 
 export TERM=xterm-256color
 
@@ -36,3 +38,5 @@ function chpwd() {
     emulate -L zsh
     ls
 }
+
+source ~/.zsh/tmuxinator.zsh
