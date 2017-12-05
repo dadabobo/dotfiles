@@ -1,0 +1,63 @@
+priority 1
+
+snippet inc "include head"
+#include <${1:iostream}>${0}
+endsnippet
+
+snippet foff "turn off the clang format"
+// clang-format off
+${VISUAL}
+// clang-format on
+endsnippet
+
+snippet cl "class .. (class)"
+class ${1:`!p
+basename =  snip.basename or "name"
+
+tokens = basename.split('_')
+tokens = [token.title() for token in tokens]
+
+snip.rv = "".join(tokens)
+`} {
+public:
+	${1/(\w+).*/$1/}(${2:arguments});
+
+private:
+	${0:/* data */}
+};
+endsnippet
+
+snippet try "try ... catch"
+try {
+	${0:${VISUAL}}
+} catch (${1:std::exception& exc}) {
+	${2:// TODO}
+}
+endsnippet
+
+snippet ns "namespace" m
+namespace ${1}{
+	${2:${VISUAL}}
+}  // namespace $1
+endsnippet
+
+snippet todo "add to do task"
+// TODO(guorongfei) ${1}
+endsnippet
+
+snippet ls "add copyright"
+//
+//          Copyright (C) 2005 - 2017 CVTE - All Rights Reserved
+//
+//                      ██████╗██╗   ██╗████████╗███████╗
+//                     ██╔════╝██║   ██║╚══██╔══╝██╔════╝
+//                     ██║     ██║   ██║   ██║   █████╗
+//                     ██║     ╚██╗ ██╔╝   ██║   ██╔══╝
+//                     ╚██████╗ ╚████╔╝    ██║   ███████╗
+//                      ╚═════╝  ╚═══╝     ╚═╝   ╚══════╝
+//
+//                          guorongfei@cvte.com
+//
+
+${0}
+endsnippet

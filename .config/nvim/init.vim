@@ -13,7 +13,7 @@ source ~/.config/nvim/pluginconfig/vimcommon.vim
 " enable matchit
 runtime macro/matchit.vim
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " themes
 Plug 'ashfinal/vim-colors-paper'
@@ -47,6 +47,7 @@ Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mileszs/ack.vim'
+Plug 'w0rp/ale'
 
 " commenter
 Plug 'scrooloose/nerdcommenter'
@@ -139,3 +140,4 @@ source ~/.config/nvim/pluginconfig/vim-workspace.vim
 source ~/.config/nvim/pluginconfig/autoformat.vim
 source ~/.config/nvim/pluginconfig/limelight.vim
 source ~/.config/nvim/pluginconfig/anyfold.vim
+source ~/.config/nvim/pluginconfig/ale.vim
