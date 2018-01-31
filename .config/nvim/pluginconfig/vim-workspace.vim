@@ -1,7 +1,5 @@
-noremap <Tab> :WSNext<CR>
-noremap <S-Tab> :WSPrev<CR>
-noremap <Leader><Tab> :WSClose<CR>
-noremap <Leader><S-Tab> :WSClose!<CR>
+noremap <Tab> :bn<CR>
+noremap <S-Tab> :bp<CR>
 
 cabbrev bonly WSBufOnly
 

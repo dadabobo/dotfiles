@@ -1,6 +1,10 @@
 " airline "
 """""""""""
 set laststatus=2
+set showtabline=2
+
+let g:airline#extensions#tabline#enabled = 1
+
 let g:airline_powerline_fonts = 1
 
 "let g:airline_left_sep = '\uE0B8'
@@ -18,8 +22,3 @@ let g:airline_theme = "tomorrow"
 "let g:airline_theme = "sol"
 "let g:airline_theme = "solarized"
 "let g:airline_theme = "papercolor"
-
-"set showtabline=2
-"let g:airline#extensions#tmuxline#enabled = 1
-"let g:webdevicons_enable_airline_tabline = 1
-"let g:webdevicons_enable_airline_statusline = 1

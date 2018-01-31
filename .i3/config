@@ -2,14 +2,14 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod4
+set $mod Mod1
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 1
-new_float normal
+new_float  pixel 1
 
 # Hide borders
 hide_edge_borders none
@@ -27,13 +27,13 @@ font xft:FiraMonoFor NF Regular 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec terminal --default-working-directory $(xcwd)
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+#bindsym $mod+d exec --no-startup-id dmenu_recency
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -55,7 +55,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec gnome-terminal -e 'bmenu'
+bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec palemoon
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
@@ -101,7 +101,7 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+q split toggle;exec notify-send "title changed"
+bindsym $mod+v split toggle;exec notify-send "title changed"
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -118,7 +118,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+#bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -134,18 +134,20 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
+bindsym $mod+Shift+s exec --no-startup-id ~/.i3/monitor.sh
+
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1 
+set $ws1 1 
 set $ws2 2 
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8 
+set $ws3 3 
+set $ws4 4 
+set $ws5 5 
+set $ws6 6 
+set $ws7 7 
+set $ws8 8 
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -183,7 +185,12 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
 assign [class="Google-chrome"] $ws2
-assign [class="netease-cloud-music"] $ws8
+assign [class="Nautilus"] $ws3
+assign [class="electronic-wechat"] $ws4
+assign [class="Typora"] $ws5
+assign [class="vlc"] $ws6
+assign [class="netease-cloud-music"] $ws7
+
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -201,7 +208,6 @@ for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
-for_window [title="About Pale Moon"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
@@ -251,10 +257,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym l resize shrink width 5 px or 5 ppt
         bindsym k resize grow height 5 px or 5 ppt
-        bindsym l resize shrink height 5 px or 5 ppt
-        bindsym semicolon resize grow width 5 px or 5 ppt
+        bindsym j resize shrink height 5 px or 5 ppt
+        bindsym h resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -280,15 +286,17 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
+# exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
+exec xrandr --output eDP1 --off --output HDMI2 --auto --panning 3840x2160+0+0 --scale 1.5x1.5
+exec --no-startup-id ss-local -c /etc/shadowsocks/config.json
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 exec --no-startup-id ss-local -c /etc/shadowsocks/config.json
-
+exec fcitx
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -327,11 +335,11 @@ bar {
 	status_command i3status
 	position bottom
 
-    #tray_output none
-    separator_symbol "❘"
+    tray_output none
+    separator_symbol " ❘ "
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
-#	tray_output eDP1
+	#tray_output HDMI2
 
 	bindsym button4 nop
 	bindsym button5 nop
@@ -420,3 +428,22 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+bindsym $mod+d \
+    exec rofi \
+    -show run \
+    -bg "#FFFFFF" -fg "#2ECC71" \
+    -hlbg "#445544" -hlfg "#2EEE71" \
+    -bw 4 -eh 1 -font "FiraMonoFor NF 18" \
+    -opacity 80 -lines 8 -line-margin 4 -width 100 -padding 160 -terminal xfce4-terminal
+
+bindsym Mod1+Tab \
+  exec rofi \
+  -show window -terminal xfce4-terminal -hide-scrollbar true  \
+  -line-margin 0 -lines 20 -eh 1 -width 64 -bw 3 \
+  -kb-mode-next      Alt+Tab \
+  -kb-mode-previous  Alt+Control+Tab \
+  -bg        "#222222"  -fg        "#2ECC71" \
+  -hlbg      "#2ECC71"  -hlfg      "#222222" \
+  -bg-active "#222222"  -fg-active "#2288DD" \
+  -font      "FiraMonoFor NF 18"   -opactiy "20"

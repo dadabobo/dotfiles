@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/guorongfei/Workspace/libwsrpc/tmp/java/com/cvte/maxhub/system'
 let g:netrw_dirhist_2='/Users/guorongfei/.dotfiles/.config/nvim/plugged'
+let g:netrw_dirhist_3='/home/guorongfei/Workspace/blog'
+let g:netrw_dirhist_4='/home/guorongfei/Workspace/libwsrpc'
+let g:netrw_dirhist_5='/home/guorongfei/.dotfiles'
+let g:netrw_dirhist_6='/home/guorongfei'
