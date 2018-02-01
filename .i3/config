@@ -2,7 +2,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod1
+set $mod Mod4
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -186,7 +186,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Skype"] $ws5
 assign [class="Google-chrome"] $ws2
 assign [class="Nautilus"] $ws3
-assign [class="electronic-wechat"] $ws4
+assign [class="wewechat"] $ws4
 assign [class="Typora"] $ws5
 assign [class="vlc"] $ws6
 assign [class="netease-cloud-music"] $ws7
@@ -273,6 +273,22 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+# Open most used applications
+bindsym $mod+o mode "$mode_open"
+set $mode_open (a)ndroid-studio, (c)hrome, (n)autilus, (t)ypora, (v)lc, (w)ewechat
+mode "$mode_open" {
+        bindsym a exec --no-startup-id android-studio, mode "default"
+        bindsym c exec --no-startup-id google-chrome-stable, mode "default"
+        bindsym n exec --no-startup-id nautilus, mode "default"
+        bindsym t exec --no-startup-id typora, mode "default"
+        bindsym v exec --no-startup-id vlc, mode "default"
+        bindsym w exec --no-startup-id wewechat, mode "default"
+
+        # exit resize mode: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
 
@@ -295,6 +311,7 @@ exec_always --no-startup-id fix_xcursor
 exec xrandr --output eDP1 --off --output HDMI2 --auto --panning 3840x2160+0+0 --scale 1.5x1.5
 exec --no-startup-id ss-local -c /etc/shadowsocks/config.json
 exec --no-startup-id setxkbmap -option ctrl:nocaps
+exec --no-startup-id setxkbmap -option altwin:swap_alt_win
 exec --no-startup-id ss-local -c /etc/shadowsocks/config.json
 exec fcitx
 
@@ -432,18 +449,7 @@ mode "$mode_gaps_outer" {
 bindsym $mod+d \
     exec rofi \
     -show run \
-    -bg "#FFFFFF" -fg "#2ECC71" \
-    -hlbg "#445544" -hlfg "#2EEE71" \
+    -bg "#FFFFFF" -fg "#FFFFFF" \
+    -hlbg "#FFFFFF" -hlfg "#2ECC71" \
     -bw 4 -eh 1 -font "FiraMonoFor NF 18" \
-    -opacity 80 -lines 8 -line-margin 4 -width 100 -padding 160 -terminal xfce4-terminal
-
-bindsym Mod1+Tab \
-  exec rofi \
-  -show window -terminal xfce4-terminal -hide-scrollbar true  \
-  -line-margin 0 -lines 20 -eh 1 -width 64 -bw 3 \
-  -kb-mode-next      Alt+Tab \
-  -kb-mode-previous  Alt+Control+Tab \
-  -bg        "#222222"  -fg        "#2ECC71" \
-  -hlbg      "#2ECC71"  -hlfg      "#222222" \
-  -bg-active "#222222"  -fg-active "#2288DD" \
-  -font      "FiraMonoFor NF 18"   -opactiy "20"
+    -opacity 80 -lines 8 -line-margin 4 -width 60 -padding 160 -terminal xfce4-terminal
