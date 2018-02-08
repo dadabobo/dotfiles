@@ -23,6 +23,7 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
 Plug 'pseewald/vim-anyfold'
+Plug 'kien/rainbow_parentheses.vim'
 
 " tmux integration
 Plug 'edkolev/tmuxline.vim'
@@ -141,3 +142,4 @@ source ~/.config/nvim/pluginconfig/autoformat.vim
 source ~/.config/nvim/pluginconfig/limelight.vim
 source ~/.config/nvim/pluginconfig/anyfold.vim
 source ~/.config/nvim/pluginconfig/ale.vim
+source ~/.config/nvim/pluginconfig/rainbow-parentheses.vim

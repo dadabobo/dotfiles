@@ -26,7 +26,10 @@ esac
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 export ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk-bundle
 
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+export TOOLCHAIN_HOME=$HOME/Android/standalone-toolchains/android-toolchain-arm
+export TOOLCHAIN_SYSROOT=$TOOLCHAIN_HOME/sysroot
+
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/:$TOOLCHAIN_HOME/bin
 #export PATH=$PATH:$ANDROID_NDK_HOME/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/
 
 # eval `dircolors ~/.dircolors`
