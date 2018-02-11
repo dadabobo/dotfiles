@@ -30,6 +30,7 @@ export TOOLCHAIN_HOME=$HOME/Android/standalone-toolchains/android-toolchain-arm
 export TOOLCHAIN_SYSROOT=$TOOLCHAIN_HOME/sysroot
 
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/:$TOOLCHAIN_HOME/bin
+export PATH=$PATH:$HOME/.cargo/bin
 #export PATH=$PATH:$ANDROID_NDK_HOME/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/
 
 # eval `dircolors ~/.dircolors`

@@ -100,6 +100,7 @@ Plug 'mhinz/vim-startify'
 Plug 'vim-scripts/tpp.vim'
 Plug 'vim-scripts/fcitx.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'Glench/Vim-Jinja2-Syntax'
 
 " uml
 Plug 'scrooloose/vim-slumlord'
@@ -143,3 +144,4 @@ source ~/.config/nvim/pluginconfig/limelight.vim
 source ~/.config/nvim/pluginconfig/anyfold.vim
 source ~/.config/nvim/pluginconfig/ale.vim
 source ~/.config/nvim/pluginconfig/rainbow-parentheses.vim
+source ~/.config/nvim/pluginconfig/vim-jinja2.vim
