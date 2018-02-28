@@ -9,5 +9,6 @@ set background=dark
 "colorscheme solarized
 colorscheme PaperColor
 "colorscheme jelleybeans
+"colorscheme onedark
 "colorscheme gruvbox
 
