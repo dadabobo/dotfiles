@@ -1,7 +1,15 @@
 " airline "
 """""""""""
+"
 set laststatus=2
 let g:airline_powerline_fonts = 1
+
+let g:airline#extensions#tmuxline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
 
 "let g:airline_left_sep = '\uE0B8'
 "let g:airline_left_alt_sep = '\uE0B4'
@@ -19,7 +27,3 @@ let g:airline_theme = "tomorrow"
 "let g:airline_theme = "solarized"
 "let g:airline_theme = "papercolor"
 
-"set showtabline=2
-"let g:airline#extensions#tmuxline#enabled = 1
-"let g:webdevicons_enable_airline_tabline = 1
-"let g:webdevicons_enable_airline_statusline = 1
