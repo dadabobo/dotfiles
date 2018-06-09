@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/guorongfei/Workspace/libwsrpc/tmp/java/com/cvte/maxhub/system'
-let g:netrw_dirhist_2='/Users/guorongfei/.dotfiles/.config/nvim/plugged'
-let g:netrw_dirhist_3='/Users/guorongfei/Workspace/libwsrpc/.git'
-let g:netrw_dirhist_4='/Users/guorongfei/Public'
-let g:netrw_dirhist_5='/Users/guorongfei/Workspace/libwsrpc/projects/android-studio/libwsrpc/target/android/bin'
-let g:netrw_dirhist_6='/Users/guorongfei/Workspace/libwsrpc/.git'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/guorongfei/Workspace/maxhub_cpp_sdk/.git'
+let g:netrw_dirhist_2='/Users/guorongfei/Library/Application Support/yidl/api'
+let g:netrw_dirhist_3='/Users/guorongfei/Library/Application Support/yidl/api/src/test'
+let g:netrw_dirhist_4='/Users/guorongfei/Workspace/rpc/sdk/maxhub_common'
+let g:netrw_dirhist_5='/Users/guorongfei/.zsh'
+let g:netrw_dirhist_6='/Users/guorongfei/Downloads'
+let g:netrw_dirhist_7='/Users/guorongfei'
+let g:netrw_dirhist_8='/Users/guorongfei/Workspace/playground/python/testfile.txt'

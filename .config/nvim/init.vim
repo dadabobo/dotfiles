@@ -16,19 +16,20 @@ runtime macro/matchit.vim
 call plug#begin('~/.config/nvim/plugged')
 
 " themes
-Plug 'ashfinal/vim-colors-paper'
-Plug 'altercation/vim-colors-solarized'
-Plug 'flazz/vim-colorschemes'
+"Plug 'ashfinal/vim-colors-paper'
+"Plug 'altercation/vim-colors-solarized'
+"Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'kshenoy/vim-signature'
-Plug 'pseewald/vim-anyfold'
-Plug 'kien/rainbow_parentheses.vim'
+"Plug 'pseewald/vim-anyfold'
+"Plug 'kien/rainbow_parentheses.vim'
+Plug 'rakr/vim-one'
 
 " tmux integration
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'benmills/vimux'
+"Plug 'benmills/vimux'
 
 " auto complete
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -49,6 +50,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
+Plug 't9md/vim-choosewin'
 
 " commenter
 Plug 'scrooloose/nerdcommenter'
@@ -97,8 +99,9 @@ Plug 'zhaohuaxishi/ctrlp-header'
 Plug 'zhaohuaxishi/vim-ctrlp-cmdpalette'
 Plug 'zhaohuaxishi/auto-header'
 Plug 'mhinz/vim-startify'
-Plug 'vim-scripts/tpp.vim'
-Plug 'vim-scripts/fcitx.vim'
+"Plug 'vim-scripts/tpp.vim'
+"Plug 'vim-scripts/fcitx.vim'
+"Plug 'CodeFalling/fcitx-vim-osx'
 Plug 'easymotion/vim-easymotion'
 Plug 'Glench/Vim-Jinja2-Syntax'
 
@@ -141,7 +144,7 @@ source ~/.config/nvim/pluginconfig/comment_arguments.vim
 source ~/.config/nvim/pluginconfig/vim-workspace.vim
 source ~/.config/nvim/pluginconfig/autoformat.vim
 source ~/.config/nvim/pluginconfig/limelight.vim
-source ~/.config/nvim/pluginconfig/anyfold.vim
+"source ~/.config/nvim/pluginconfig/anyfold.vim
 source ~/.config/nvim/pluginconfig/ale.vim
-source ~/.config/nvim/pluginconfig/rainbow-parentheses.vim
+"source ~/.config/nvim/pluginconfig/rainbow-parentheses.vim
 source ~/.config/nvim/pluginconfig/vim-jinja2.vim
